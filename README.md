@@ -1,4 +1,4 @@
-# Project Title
+# What is the right price for my Airbnb?
 
 Simple overview of use/purpose.
 
