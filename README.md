@@ -1,4 +1,4 @@
-# What is the right price for my Airbnb?
+# AirBnb - Don't Pay Too Much
 
 Simple overview of use/purpose.
 
