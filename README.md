@@ -1,6 +1,6 @@
 # AirBnb - Don't Pay Too Much
 
-## Management summary
+### Management summary
 
 In the early years of Airbnb's existence, the business was widely known as an affordable and friendly way to travel. The fact that it was a way for hosts to make some extra money and for travellers to find a bed for competitive prices turned the concept into a massive success. However, the growth of Airbnb comes with certain disadvantages. One of them is the increasing cost of renting an accomodation trough Airbnb. The project will focus on creating a price estimating tool that both hosts and renters of Airbnb accomodations can use to become better informed about the average price for similar accomodations. 
 
@@ -8,9 +8,18 @@ The data used in the research is gathered useing an available Airbnb dataset, wi
 
 Eventually, the results of the research are planned to be presented using a website. This website shows the tool which one can use to estimate the price of their accomodation. To come to estimation, the visitor of the website has to fill out all characteristcs of their respective accomodation. The tool then builds a linear regression based on these characteristics and shows as an output the average price. Hosts can use this information in order to set a price for their accomodation and renters can use it to decide whether they are willing to pay a certain price when being confronted with the average price of similar accomodations. The goal is to keep the Airbnb market honest and transparant.
 
-## Research method
+### Research method
 
 
+### Literature
+
+### Authors
+
+Annabelle den Heijer
+Mike Verweij
+Sjors Boelaars
+Bouke Schippers
+Luc Peeters
 
 ### Executing program
 
@@ -20,18 +29,14 @@ Eventually, the results of the research are planned to be presented using a webs
 code blocks for commands
 ```
 
-## Help
+### Help
 
 Any advise for common problems or issues.
 ```
 command to run if program contains helper info
 ```
 
-## Authors
-
-Annabelle t
-
-## Version History
+### Version History
 
 * 0.2
     * Various bug fixes and optimizations
@@ -39,7 +44,7 @@ Annabelle t
 * 0.1
     * Initial Release
 
-## License
+### License
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
