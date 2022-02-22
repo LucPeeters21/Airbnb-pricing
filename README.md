@@ -18,7 +18,7 @@ Again, taking Amsterdam into consideration, there the general house price is biz
 This study seeks to expose that landlords are charging way too much for their Airbnb with the hope that rents will fall, fewer Airbnb’s will become available, more buying homes, and at least house prices will not continue to rise.
 
 ### Literature
-Woudstra, E. (2018, decembre 10). De prijzen schieten omhoog: De invloed van Airbnb op de woningmarkt. Spatial, Transport and Environmental Economics. Retrieved February 22, 2022, from https://spatialeconomics.nl/korte-termijnverhuur-van-accommodaties-de-invloed-van-airbnb-op-de-woningmarkt/
+
 ### Authors
 
 Annabelle den Heijer, Mike Verweij, Sjors Boelaars, Bouke Schippers, Luc Peeters
