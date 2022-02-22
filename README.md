@@ -15,11 +15,7 @@ Eventually, the results of the research are planned to be presented using a webs
 
 ### Authors
 
-Annabelle den Heijer
-Mike Verweij
-Sjors Boelaars
-Bouke Schippers
-Luc Peeters
+Annabelle den Heijer, Mike Verweij, Sjors Boelaars, Bouke Schippers, Luc Peeters
 
 ### Executing program
 
