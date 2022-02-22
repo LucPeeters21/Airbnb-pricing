@@ -11,8 +11,14 @@ Eventually, the results of the research are planned to be presented using a webs
 ### Research method
 To collect the required data, two data collection methods will be used. Firstly data that is made available by Airbnb (http://insideairbnb.com/get-the-data.html) will be used to retrieve information about the prices in the different cities. Secondly, a web-scraper will be used that retrieves information on the data that isn't provided by Airbnb. For example Airbnb doesn't provide information about the different characteristics an Airbnb rental has (e.g., city, neighbourhood, nearby facilities). These characteristics will be used as explanatory variables for price and by using linear regressions, the significance and the size of the effect can be determined for a variety of circumstances.
 
-### Literature
+### Relevance
+This research question covers both hosts and tenants of Airbnb. This research will investigate whether hosts ask too much money for their Airbnb. It definitely is an important topic to investigate,
+because for hosts, it is very attractive to rent out their home via Airbnb, especially if the person lives in a popular city. For example, consider Amsterdam, it is a tourist attraction and hosts can charge a huge rent for an Airbnb. First, this research examines whether a hosts is allowed to charge the rent it does. Secondly, this research is very relevant because there is a correlation between the number of Airbnb's and the house price in the Netherlands. 
+Again, taking Amsterdam into consideration, there the general house price is bizarrely high, according to a study by (Woudstra, 2018), this is partly due to the high number of Airbnb's, 20,000 in 2019. Landlords with a lot of money see an easy opportunity to make a lot of money.  As a result, fewer owner-occupied houses become available for the private individual and student houses for the student. The logical consequence is that prices rise exponentially. 
+This study seeks to expose that landlords are charging way too much for their Airbnb with the hope that rents will fall, fewer Airbnb’s will become available, more buying homes, and at least house prices will not continue to rise.
 
+### Literature
+Woudstra, E. (2018, decembre 10). De prijzen schieten omhoog: De invloed van Airbnb op de woningmarkt. Spatial, Transport and Environmental Economics. Retrieved February 22, 2022, from https://spatialeconomics.nl/korte-termijnverhuur-van-accommodaties-de-invloed-van-airbnb-op-de-woningmarkt/
 ### Authors
 
 Annabelle den Heijer, Mike Verweij, Sjors Boelaars, Bouke Schippers, Luc Peeters
