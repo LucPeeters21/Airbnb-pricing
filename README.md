@@ -1,4 +1,4 @@
-# AirBnb - Don't Pay Too Much
+# Airbnb - Don't Pay Too Much
 
 ### Management summary
 
