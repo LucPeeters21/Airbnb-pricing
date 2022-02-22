@@ -1,0 +1,8 @@
+*.log
+*.aux
+*.Rhistory
+.RData
+**gen/
+**.Rout
+*.csv
+*.csv.gz
