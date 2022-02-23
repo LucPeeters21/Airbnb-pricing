@@ -15,7 +15,7 @@ To collect the required data, two data collection methods will be used. Firstly 
 
 ### Authors
 
-Annabelle den Heijer, Mike Verweij, Sjors Boelaars, Bouke Schippers, Luc Peeters
+Annabelle den Heijer, (Mike Verweij)[https://github.com/Mikeverweij96], Sjors Boelaars, Bouke Schippers, Luc Peeters
 
 ### Executing program
 
