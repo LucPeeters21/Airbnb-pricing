@@ -4,5 +4,5 @@
 .RData
 **gen/
 **.Rout
-*.csv
 *.csv.gz
+.Rproj.user
