@@ -50,6 +50,7 @@ for city in range(len(cities_list)):
     country = identifier.split(",",3)[-1] #save the country, which is always the last part of the identifier that seperates city, state/province and country by comma's.
     city = identifier.split(",",3)[0] #save the city, which is always the first part of the identifier that seperates city, state/province and country by comma's.
     
+    
     #store the city, country and URL link in a temporary dictionary:
     city_info = {"Country": country, "City": city ,"Link": URL_link}
     
