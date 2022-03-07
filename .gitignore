@@ -6,3 +6,4 @@
 **.Rout
 *.csv.gz
 .Rproj.user
+*.csv
