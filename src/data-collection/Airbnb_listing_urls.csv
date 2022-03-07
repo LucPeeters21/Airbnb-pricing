@@ -1,0 +1,109 @@
+Country;City;Link
+ The Netherlands;Amsterdam;http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-12-05/data/listings.csv.gz
+ Belgium;Antwerp;http://data.insideairbnb.com/belgium/vlg/antwerp/2021-12-26/data/listings.csv.gz
+ United States;Asheville;http://data.insideairbnb.com/united-states/nc/asheville/2021-12-15/data/listings.csv.gz
+ Greece;Athens;http://data.insideairbnb.com/greece/attica/athens/2021-12-23/data/listings.csv.gz
+ United States;Austin;http://data.insideairbnb.com/united-states/tx/austin/2021-12-11/data/listings.csv.gz
+ Thailand;Bangkok;http://data.insideairbnb.com/thailand/central-thailand/bangkok/2021-12-23/data/listings.csv.gz
+ Spain;Barcelona;http://data.insideairbnb.com/spain/catalonia/barcelona/2021-12-07/data/listings.csv.gz
+ Australia;Barossa Valley;http://data.insideairbnb.com/australia/sa/barossa-valley/2021-12-24/data/listings.csv.gz
+ Australia;Barwon South West;http://data.insideairbnb.com/australia/vic/barwon-south-west-vic/2021-12-26/data/listings.csv.gz
+ China;Beijing;http://data.insideairbnb.com/china/beijing/beijing/2021-12-24/data/listings.csv.gz
+ Belize;Belize;http://data.insideairbnb.com/belize/bz/belize/2021-12-28/data/listings.csv.gz
+ Italy;Bergamo;http://data.insideairbnb.com/italy/lombardia/bergamo/2021-12-30/data/listings.csv.gz
+ Germany;Berlin;http://data.insideairbnb.com/germany/be/berlin/2021-12-17/data/listings.csv.gz
+ Italy;Bologna;http://data.insideairbnb.com/italy/emilia-romagna/bologna/2021-12-17/data/listings.csv.gz
+ France;Bordeaux;http://data.insideairbnb.com/france/nouvelle-aquitaine/bordeaux/2021-12-11/data/listings.csv.gz
+ United States;Boston;http://data.insideairbnb.com/united-states/ma/boston/2021-12-17/data/listings.csv.gz
+ United Kingdom;Bristol;http://data.insideairbnb.com/united-kingdom/england/bristol/2021-12-23/data/listings.csv.gz
+ United States;Broward County;http://data.insideairbnb.com/united-states/fl/broward-county/2021-12-23/data/listings.csv.gz
+ Belgium;Brussels;http://data.insideairbnb.com/belgium/bru/brussels/2021-12-20/data/listings.csv.gz
+ Argentina;Buenos Aires;http://data.insideairbnb.com/argentina/ciudad-aut%C3%B3noma-de-buenos-aires/buenos-aires/2021-12-25/data/listings.csv.gz
+ United States;Cambridge;http://data.insideairbnb.com/united-states/ma/cambridge/2021-12-25/data/listings.csv.gz
+ South Africa;Cape Town;http://data.insideairbnb.com/south-africa/wc/cape-town/2021-12-25/data/listings.csv.gz
+ United States;Chicago;http://data.insideairbnb.com/united-states/il/chicago/2021-12-15/data/listings.csv.gz
+ United States;Clark County;http://data.insideairbnb.com/united-states/nv/clark-county-nv/2021-12-18/data/listings.csv.gz
+ United States;Columbus;http://data.insideairbnb.com/united-states/oh/columbus/2021-12-23/data/listings.csv.gz
+ Denmark;Copenhagen;http://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2021-12-28/data/listings.csv.gz
+ Greece;Crete;http://data.insideairbnb.com/greece/crete/crete/2021-12-26/data/listings.csv.gz
+ United States;Denver;http://data.insideairbnb.com/united-states/co/denver/2021-12-29/data/listings.csv.gz
+ Ireland;Dublin;http://data.insideairbnb.com/ireland/leinster/dublin/2021-12-08/data/listings.csv.gz
+ United Kingdom;Edinburgh;http://data.insideairbnb.com/united-kingdom/scotland/edinburgh/2021-12-12/data/listings.csv.gz
+ Spain;Euskadi;http://data.insideairbnb.com/spain/pv/euskadi/2021-12-30/data/listings.csv.gz
+ Italy;Florence;http://data.insideairbnb.com/italy/toscana/florence/2021-12-17/data/listings.csv.gz
+ South Africa;Gauteng;http://data.insideairbnb.com/south-africa/gt/gauteng/2021-12-28/data/listings.csv.gz
+ Switzerland;Geneva;http://data.insideairbnb.com/switzerland/geneva/geneva/2021-12-26/data/listings.csv.gz
+ Belgium;Ghent;http://data.insideairbnb.com/belgium/vlg/ghent/2021-12-23/data/listings.csv.gz
+ Spain;Girona;http://data.insideairbnb.com/spain/catalonia/girona/2021-12-30/data/listings.csv.gz
+ United Kingdom;Greater Manchester;http://data.insideairbnb.com/united-kingdom/england/greater-manchester/2021-12-23/data/listings.csv.gz
+ United States;Hawaii;http://data.insideairbnb.com/united-states/hi/hawaii/2021-12-11/data/listings.csv.gz
+ China;Hong Kong;http://data.insideairbnb.com/china/hk/hong-kong/2021-12-20/data/listings.csv.gz
+Ireland;Ireland;http://data.insideairbnb.com/ireland/2021-12-23/data/listings.csv.gz
+ Turkey;Istanbul;http://data.insideairbnb.com/turkey/marmara/istanbul/2021-12-29/data/listings.csv.gz
+ United States;Jersey City;http://data.insideairbnb.com/united-states/nj/jersey-city/2021-12-20/data/listings.csv.gz
+ Portugal;Lisbon;http://data.insideairbnb.com/portugal/lisbon/lisbon/2021-12-08/data/listings.csv.gz
+ United Kingdom;London;http://data.insideairbnb.com/united-kingdom/england/london/2021-12-07/data/listings.csv.gz
+ United States;Los Angeles;http://data.insideairbnb.com/united-states/ca/los-angeles/2021-12-05/data/listings.csv.gz
+ France;Lyon;http://data.insideairbnb.com/france/auvergne-rhone-alpes/lyon/2021-12-11/data/listings.csv.gz
+ Spain;Madrid;http://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2021-12-08/data/listings.csv.gz
+ Spain;Malaga;http://data.insideairbnb.com/spain/andaluc%C3%ADa/malaga/2021-12-30/data/listings.csv.gz
+ Spain;Mallorca;http://data.insideairbnb.com/spain/islas-baleares/mallorca/2021-12-12/data/listings.csv.gz
+ Australia;Melbourne;http://data.insideairbnb.com/australia/vic/melbourne/2021-12-07/data/listings.csv.gz
+ Spain;Menorca;http://data.insideairbnb.com/spain/islas-baleares/menorca/2021-12-30/data/listings.csv.gz
+ Mexico;Mexico City;http://data.insideairbnb.com/mexico/df/mexico-city/2021-12-25/data/listings.csv.gz
+ Italy;Milan;http://data.insideairbnb.com/italy/lombardy/milan/2021-12-15/data/listings.csv.gz
+ Canada;Montreal;http://data.insideairbnb.com/canada/qc/montreal/2021-12-11/data/listings.csv.gz
+Malta;Malta;http://data.insideairbnb.com/malta/2021-12-28/data/listings.csv.gz
+ Germany;Munich;http://data.insideairbnb.com/germany/bv/munich/2021-12-24/data/listings.csv.gz
+ Italy;Naples;http://data.insideairbnb.com/italy/campania/naples/2021-12-15/data/listings.csv.gz
+ United States;Nashville;http://data.insideairbnb.com/united-states/tn/nashville/2021-12-17/data/listings.csv.gz
+ Canada;New Brunswick;http://data.insideairbnb.com/canada/nb/new-brunswick/2021-12-28/data/listings.csv.gz
+ United States;New Orleans;http://data.insideairbnb.com/united-states/la/new-orleans/2021-12-07/data/listings.csv.gz
+ United States;New York City;http://data.insideairbnb.com/united-states/ny/new-york-city/2021-12-04/data/listings.csv.gz
+ Australia;Northern Rivers;http://data.insideairbnb.com/australia/nsw/northern-rivers/2021-12-12/data/listings.csv.gz
+New Zealand;New Zealand;http://data.insideairbnb.com/new-zealand/2021-12-15/data/listings.csv.gz
+ United States;Oakland;http://data.insideairbnb.com/united-states/ca/oakland/2021-12-20/data/listings.csv.gz
+ Norway;Oslo;http://data.insideairbnb.com/norway/oslo/oslo/2021-12-28/data/listings.csv.gz
+ Canada;Ottawa;http://data.insideairbnb.com/canada/on/ottawa/2021-12-12/data/listings.csv.gz
+ United States;Pacific Grove;http://data.insideairbnb.com/united-states/ca/pacific-grove/2021-12-30/data/listings.csv.gz
+ France;Paris;http://data.insideairbnb.com/france/ile-de-france/paris/2021-12-07/data/listings.csv.gz
+ United States;Portland;http://data.insideairbnb.com/united-states/or/portland/2021-12-20/data/listings.csv.gz
+ Portugal;Porto;http://data.insideairbnb.com/portugal/norte/porto/2021-12-08/data/listings.csv.gz
+ Czech Republic;Prague;http://data.insideairbnb.com/czech-republic/prague/prague/2021-12-18/data/listings.csv.gz
+ Italy;Puglia;http://data.insideairbnb.com/italy/puglia/puglia/2021-12-30/data/listings.csv.gz
+ Canada;Quebec City;http://data.insideairbnb.com/canada/qc/quebec-city/2021-12-11/data/listings.csv.gz
+ United States;Rhode Island;http://data.insideairbnb.com/united-states/ri/rhode-island/2021-12-30/data/listings.csv.gz
+ Latvia;Riga;http://data.insideairbnb.com/latvia/riga/riga/2021-12-29/data/listings.csv.gz
+ Brazil;Rio de Janeiro;http://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2021-12-24/data/listings.csv.gz
+ Italy;Rome;http://data.insideairbnb.com/italy/lazio/rome/2021-12-08/data/listings.csv.gz
+ United States;Salem;http://data.insideairbnb.com/united-states/or/salem-or/2021-12-20/data/listings.csv.gz
+ United States;San Diego;http://data.insideairbnb.com/united-states/ca/san-diego/2021-12-20/data/listings.csv.gz
+ United States;San Francisco;http://data.insideairbnb.com/united-states/ca/san-francisco/2021-12-04/data/listings.csv.gz
+ United States;San Mateo County;http://data.insideairbnb.com/united-states/ca/san-mateo-county/2021-12-20/data/listings.csv.gz
+ United States;Santa Clara County;http://data.insideairbnb.com/united-states/ca/santa-clara-county/2021-12-23/data/listings.csv.gz
+ United States;Santa Cruz County;http://data.insideairbnb.com/united-states/ca/santa-cruz-county/2021-12-30/data/listings.csv.gz
+ Chile;Santiago;http://data.insideairbnb.com/chile/rm/santiago/2021-12-25/data/listings.csv.gz
+ United States;Seattle;http://data.insideairbnb.com/united-states/wa/seattle/2021-12-20/data/listings.csv.gz
+ Spain;Sevilla;http://data.insideairbnb.com/spain/andaluc%C3%ADa/sevilla/2021-12-29/data/listings.csv.gz
+ China;Shanghai;http://data.insideairbnb.com/china/shanghai/shanghai/2021-12-24/data/listings.csv.gz
+ Italy;Sicily;http://data.insideairbnb.com/italy/sicilia/sicily/2021-12-28/data/listings.csv.gz
+ Singapore;Singapore;http://data.insideairbnb.com/singapore/sg/singapore/2021-12-26/data/listings.csv.gz
+ Greece;South Aegean;http://data.insideairbnb.com/greece/south-aegean/south-aegean/2021-12-18/data/listings.csv.gz
+ Sweden;Stockholm;http://data.insideairbnb.com/sweden/stockholms-l%C3%A4n/stockholm/2021-12-28/data/listings.csv.gz
+ Australia;Sydney;http://data.insideairbnb.com/australia/nsw/sydney/2021-12-07/data/listings.csv.gz
+ Taiwan;Taipei;http://data.insideairbnb.com/taiwan/northern-taiwan/taipei/2021-12-30/data/listings.csv.gz
+ Australia;Tasmania;http://data.insideairbnb.com/australia/tas/tasmania/2021-12-05/data/listings.csv.gz
+ Greece;Thessaloniki;http://data.insideairbnb.com/greece/central-macedonia/thessaloniki/2021-12-23/data/listings.csv.gz
+ Japan;Tokyo;http://data.insideairbnb.com/japan/kant%C5%8D/tokyo/2021-12-28/data/listings.csv.gz
+ Canada;Toronto;http://data.insideairbnb.com/canada/on/toronto/2021-12-05/data/listings.csv.gz
+ Italy;Trentino;http://data.insideairbnb.com/italy/trentino-alto-adige-s%C3%BCdtirol/trentino/2021-12-30/data/listings.csv.gz
+ United States;Twin Cities MSA;http://data.insideairbnb.com/united-states/mn/twin-cities-msa/2021-12-20/data/listings.csv.gz
+ Spain;Valencia;http://data.insideairbnb.com/spain/vc/valencia/2021-12-18/data/listings.csv.gz
+ Canada;Vancouver;http://data.insideairbnb.com/canada/bc/vancouver/2021-12-11/data/listings.csv.gz
+ Switzerland;Vaud;http://data.insideairbnb.com/switzerland/vd/vaud/2021-12-04/data/listings.csv.gz
+ Italy;Venice;http://data.insideairbnb.com/italy/veneto/venice/2021-12-05/data/listings.csv.gz
+ Canada;Victoria;http://data.insideairbnb.com/canada/bc/victoria/2021-12-28/data/listings.csv.gz
+ Austria;Vienna;http://data.insideairbnb.com/austria/vienna/vienna/2021-12-08/data/listings.csv.gz
+ United States;Washington;http://data.insideairbnb.com/united-states/dc/washington-dc/2021-12-15/data/listings.csv.gz
+ Australia;Western Australia;http://data.insideairbnb.com/australia/wa/western-australia/2021-12-23/data/listings.csv.gz
+ Switzerland;Zurich;http://data.insideairbnb.com/switzerland/z%C3%BCrich/zurich/2021-12-28/data/listings.csv.gz
