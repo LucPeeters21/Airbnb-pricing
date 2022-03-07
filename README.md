@@ -15,6 +15,7 @@ The data used in the research is gathered using an available Airbnb dataset, wit
 ### Research method
 To collect the required data, two data collection methods will be used. Firstly data that is made available by Airbnb (http://insideairbnb.com/get-the-data.html) will be used to retrieve information about the prices in the different cities. Secondly, a web-scraper will be used that retrieves information on the data that isn't provided by Airbnb. For example Airbnb doesn't provide information about the different characteristics an Airbnb rental has (e.g., city, neighbourhood, nearby facilities). These characteristics will be used as explanatory variables for price and by using linear regressions, the significance and the size of the effect can be determined for a variety of circumstances.
 
+
 ### Relevance
 This research question covers both hosts and tenants of Airbnb. This research will investigate whether hosts ask too much money for their Airbnb. It definitely is an important topic to investigate,
 because for hosts, it is very attractive to rent out their home via Airbnb, especially if the person lives in a popular city. For example, consider Amsterdam, it is a tourist attraction and hosts can charge a huge rent for an Airbnb. First, this research examines whether a hosts is allowed to charge the rent it does. Secondly, this research is very relevant because there is a correlation between the number of Airbnb's and the house price in the Netherlands. 
