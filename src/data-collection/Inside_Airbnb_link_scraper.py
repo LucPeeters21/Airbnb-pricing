@@ -43,11 +43,23 @@ res = driver.page_source
 soup = BeautifulSoup(res, features="html.parser")
 
 Cities_list=soup.find_all('tbody') #create a list of all cities (identified by 'tbody')
+Title_list=soup.find_all('h3') #Create a list that gives the city, province/state and country
+
 
 city_list=[] # create an empty list to later store the individual city download url's in
+count=0
 for city in Cities_list:
-    URL_link = city.find("a") #open the first 'a' in each 'tbody', since thisis where the listings.csv.gz file is.
-    city_list.append(URL_link.get('href')) #only append the 'href', which is the link of the csv.gz file.
-   
+    URL_link = city.find("a").get('href') #open the first 'a' in each 'tbody', since thisis where the listings.csv.gz file is.
+     #only append the 'href', which is the link of the csv.gz file.
+    Title = Title_list[count].text
+    print(Title)
+    
+    Country = Title.split(",",3)[-1] #get only the country, Since the country is always the last part of the string, we want to extract always te last part
+    City = Title.split(",",3)[0]
+    
+    city_info = {"Country": Country, "City": City ,"Link": URL_link}
+    
+    city_list.append(city_info) 
+    count+=1
     
 (pd.DataFrame(city_list)).to_csv("Airbnb_listing_urls.csv", index=False, sep=';') #Finally save your data to a csv
