@@ -4,8 +4,6 @@
 
 This repository includes research done by five students of the Tilburg University about Airbnb. As you might know in the early years of Airbnb's existence, the business was widely known as an affordable and friendly way to travel. The fact that it was a way for hosts to make some extra money and for travellers to find a bed for competitive prices turned the concept into a massive success. However, the growth of Airbnb comes with certain disadvantages. One of them is the rapid increasing cost of renting an accomodation trough Airbnb as can be seen in the graph below. Therefore we made an estimating tool that renters of Airbnb accomodations can use to become better informed about the average price for similar accomodations. 
 
-![image](https://user-images.githubusercontent.com/98957827/155588734-57418bdc-111e-48ff-808a-09fbe5bca812.png)
-
 That sound nice right! It gets even better. 
 This estimating tool will be made publicly available on a website. To come to estimation, the visitor of the website has to fill out all characteristcs of their respective accomodation. The tool then builds a linear regression based on these characteristics and shows as an output the average price.
 
