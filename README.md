@@ -26,7 +26,7 @@ This study seeks to expose that landlords are charging way too much for their Ai
 
 ### Authors
 
-[Annabelle den Heijer](https://github.com/annabelledenh), [Mike Verweij](https://github.com/Mikeverweij96), Sjors Boelaars, Bouke Schippers, Luc Peeters
+[Annabelle den Heijer](https://github.com/annabelledenh), [Mike Verweij](https://github.com/Mikeverweij96), Sjors Boelaars, Bouke Schippers, [Luc Peeters](https://github.com/LucPeeters21)
 
 ### Executing program
 
