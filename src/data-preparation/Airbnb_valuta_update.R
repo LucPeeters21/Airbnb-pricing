@@ -45,7 +45,7 @@ ggplot(airbnb_listings, aes(x=price_euros)) + geom_histogram(binwidth = 0.1) + x
 ggplot(airbnb_listings, aes(x=price_per_person)) + geom_histogram(binwidth = 10) + xlim(500, 5000) + ylim(0, 3000) # with limit
 
 # Delete extreme low and high outliers based on price per person
-airbnb_listings <- airbnb_listings %>% filter(price_per_person > 0 & price_per_person < 1500)
+airbnb_listings <- airbnb_listings %>% filter(price_per_person > 0 & price_per_person < 1000)
 
 # Check means of price_euros for multiple variables
 cities <- airbnb_listings %>% group_by(city, room_type) %>% summarize_at(vars(price_euros), list(name=mean), na.rm=TRUE) 
