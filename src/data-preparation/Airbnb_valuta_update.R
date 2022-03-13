@@ -8,10 +8,18 @@ library(base)
 library(data.table)
 library(googledrive)
 
+#################
+####DOWNLOAD#####
+#################
+
 # Import data
 data_id <-"1Tek0FsrdpnnvzQukog_lmtWAHHvhJJUQ" #the id of the dataset
 drive_download(as_id(data_id), path = "Airbnb_EU_listings_reduced.csv", overwrite = TRUE) #download the data from the drive
 airbnb_listings<-read.csv("Airbnb_EU_listings_reduced.csv", sep=";") #save the data in a dataframe
+
+####################
+####ADJUST DATA#####
+####################
 
 # Remove dollar sign from 'prices' column
 airbnb_listings$price <- (gsub("\\$|,", "", airbnb_listings$price))
@@ -57,4 +65,6 @@ common_properties<-table_property_type %>% filter(Freq>3300)
 sum(common_properties$Freq)
 airbnb_listings <- airbnb_listings %>% mutate(common_property=ifelse(property_type %in% common_properties$Var1)
 
-                                              
+#################
+####Analysis#####
+#################
