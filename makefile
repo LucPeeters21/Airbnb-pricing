@@ -1,4 +1,7 @@
-all: analysis data-preparation
+all: analysis data-preparation data-collection
+
+data-collection:
+	make -c src/data-collection
 
 data-preparation:
 	make -C src/data-preparation
@@ -9,3 +12,6 @@ analysis: data-preparation
 clean:
 	-rm -r data
 	-rm -r gen
+
+
+
