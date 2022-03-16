@@ -56,8 +56,8 @@ code blocks for commands
 
 
 ### Authors
-
 [Annabelle den Heijer](https://github.com/annabelledenh), [Mike Verweij](https://github.com/Mikeverweij96), [Sjors Boelaars](https://github.com/SjorsBoelaars1), Bouke Schippers, [Luc Peeters](https://github.com/LucPeeters21)
+
 
 ## Acknowledgments
 
