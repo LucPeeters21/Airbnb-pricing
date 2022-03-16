@@ -1,4 +1,3 @@
-install.packages("googledrive")
 library(haven)
 library(dplyr)
 library(ggplot2)
@@ -8,12 +7,11 @@ library(base)
 library(data.table)
 library(googledrive)
 
-# Import data
-data_id <-"1Tek0FsrdpnnvzQukog_lmtWAHHvhJJUQ" #the id of the dataset
-drive_download(as_id(data_id), path = "Airbnb_EU_listings_reduced.csv", overwrite = TRUE) #download the data from the drive
-airbnb_listings<-read.csv("Airbnb_EU_listings_reduced.csv", sep=";") #save the data in a dataframe
+####################
+####ADJUST DATA#####
+####################
 
-# Remove dollar sign and comma from 'prices' column
+# Remove dollar sign from 'prices' column
 airbnb_listings$price <- (gsub("\\$|,", "", airbnb_listings$price))
 
 # Assure 'price' column is a numeric object type
@@ -45,7 +43,7 @@ ggplot(airbnb_listings, aes(x=price_euros)) + geom_histogram(binwidth = 0.1) + x
 ggplot(airbnb_listings, aes(x=price_per_person)) + geom_histogram(binwidth = 10) + xlim(500, 5000) + ylim(0, 3000) # with limit
 
 # Delete extreme low and high outliers based on price per person
-airbnb_listings <- airbnb_listings %>% filter(price_per_person > 0 & price_per_person < 1500)
+airbnb_listings <- airbnb_listings %>% filter(price_per_person > 0 & price_per_person < 1000)
 
 # Check means of price_euros for multiple variables
 cities <- airbnb_listings %>% group_by(city, room_type) %>% summarize_at(vars(price_euros), list(name=mean), na.rm=TRUE) 
@@ -56,5 +54,3 @@ table_property_type <-as.data.frame(table(airbnb_listings$property_type))
 common_properties<-table_property_type %>% filter(Freq>3300)
 sum(common_properties$Freq)
 airbnb_listings <- airbnb_listings %>% mutate(common_property=ifelse(property_type %in% common_properties$Var1)
-
-                                              
