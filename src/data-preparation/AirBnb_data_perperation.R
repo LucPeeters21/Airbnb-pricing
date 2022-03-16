@@ -34,21 +34,18 @@ summary(airbnb_listings)
 airbnb_listings$price <- (gsub("\\$|,", "", airbnb_listings$price))
 airbnb_listings$host_response_rate <- (gsub("%", "", airbnb_listings$host_response_rate))
 
-# Remove variables that we will not used in analysis
-airbnb_listings <- airbnb_listings %>% select(-X.x, -X.y, -neighbourhood, -maximum_nights, -host_since, -host_listings_count)
-airbnb_listings <- airbnb_listings %>% select(-host_listings_count)
-
-neighbourhood_shares table(airbnb_listings$neighbourhood_cleansed)
-
 # Assure correct data types
 airbnb_listings$host_since <- as.Date(airbnb_listings$host_since)
 
+# Recode bathroom_text to numeric values
+airbnb_listings$bathrooms_text <- (gsub("bath|baths|private|shared|half-|Private|Half-|Shared| ", "", airbnb_listings$bathrooms_text))
+
 # Create list of columns that we want to change to numeric
-column_list_numeric <- grep('price|host_response_rate|host_listings_count|accommodates|bedrooms|beds|minimum_nights|maximum_nights|number_of_reviews|review_scores_rating|review_scores_accuracy|review_scores_cleanliness|review_scores_checkin|review_scores_communication|review_scores_location|review_scores_value|reviews_per_month', colnames(airbnb_listings,), value=T)
+column_list_numeric <- grep('bathrooms_text|price|host_response_rate|host_listings_count|accommodates|bedrooms|beds|minimum_nights|maximum_nights|number_of_reviews|review_scores_rating|review_scores_accuracy|review_scores_cleanliness|review_scores_checkin|review_scores_communication|review_scores_location|review_scores_value|reviews_per_month', colnames(airbnb_listings,), value=T)
 for (column in column_list_numeric){
   airbnb_listings[,column] <- as.numeric(airbnb_listings[,column])
 }
-
+is.numeric(airbnb_listings$price)
 # create values consisting of current valutas of respective countries
 czk <- 0.04 # value of 1 CZK in EUR (as of 12-2021)
 ddk <- 0.134  # value of 1 DDK in EUR (as of 12-2021)
@@ -70,16 +67,23 @@ airbnb_listings <- airbnb_listings %>% filter(price_per_person > 0 & price_per_p
 # Check means again
 airbnb_listings %>% group_by(country) %>% summarize_at(vars(price_euros), list(name=mean), na.rm=TRUE) 
 
+# Remove variables that we will not use in analysis
+airbnb_listings <- airbnb_listings %>% select(-X.x, -X.y, -neighbourhood, -maximum_nights, -host_since, -host_listings_count, -amenities, -neighbourhood_cleansed)
 
-cities <- airbnb_listings %>% group_by(city, room_type) %>% summarize_at(vars(price_euros), list(name=mean), na.rm=TRUE) 
-cities <- airbnb_listings %>% group_by(city, property_type) %>% summarize_at(vars(price_euros), list(name=mean), na.rm=TRUE)
+# Change superhost and identified values
+airbnb_listings <- airbnb_listings %>% mutate(host_is_superhost=ifelse(host_is_superhost == "t", 1,
+                                                                 ifelse(host_is_superhost == "f", 0, NA)))
+airbnb_listings <- airbnb_listings %>% mutate(host_identity_verified=ifelse(host_identity_verified == "t", 1,
+                                                                       ifelse(host_identity_verified == "f", 0, NA)))
+                                                                        
+# Create dummy variable for property types that occur at less than 1% of data
 table_property_type <-as.data.frame(table(airbnb_listings$property_type))
+table_cut_of<- table_property_type %>% filter(Freq >0.01*nrow(airbnb_listings))
+airbnb_listings <- airbnb_listings %>% mutate(property_type=ifelse(property_type %in% table_cut_of$Var1, property_type, 'Non-common proporty type'))
 
-#Create subsets
-mean_prices_neighbourhoods <- airbnb_listings %>% select(neighbourhood, price_per_person) %>%  group_by(neighbourhood) %>%  summarize_all(mean, na.rm=TRUE)
-View(mean_prices_neighbourhoods)
-barplot(table(mean_prices_neighbourhoods$neighbourhood))
+# test regression
+regression_all <- lm(price_euros~.,airbnb_listings)
+summary(regression_all)
 
-mean_prices_country <- Airbnb_listings %>% select(link, price) %>%  group_by(link) %>%  summarize_all(mean, na.rm=TRUE)
-View(mean_prices_country)
+
 
