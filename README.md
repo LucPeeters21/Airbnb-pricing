@@ -15,18 +15,11 @@ To collect the required data, a web-scraper was build that retrieves information
 
 
 ### Relevance
-This research question covers both hosts and tenants of Airbnb. This research will investigate whether hosts ask too much money for their Airbnb. It definitely is an important topic to investigate,
-because for hosts, it is very attractive to rent out their home via Airbnb, especially if the person lives in a popular city. For example, consider Amsterdam, it is a tourist attraction and hosts can charge a huge rent for an Airbnb. First, this research examines whether a hosts is allowed to charge the rent it does. Secondly, this research is very relevant because there is a correlation between the number of Airbnb's and the house price in the Netherlands. 
+This research question covers both hosts and tenants of Airbnb. This research will investigate whether hosts ask too much money for their Airbnb. It definitely is an important topic to investigate, because for hosts, it is very attractive to rent out their home via Airbnb, especially if the person lives in a popular city. For example, consider Amsterdam, it is a tourist attraction and hosts can charge a huge rent for an Airbnb. First, this research examines whether a hosts is allowed to charge the rent it does. Secondly, this research is very relevant because there is a correlation between the number of Airbnb's and the house price in the Netherlands. 
 Again, taking Amsterdam into consideration, there the general house price is bizarrely high, according to a study by (Woudstra, 2018), this is partly due to the high number of Airbnb's, 20,000 in 2019. Landlords with a lot of money see an easy opportunity to make a lot of money.  As a result, fewer owner-occupied houses become available for the private individual and student houses for the student. The logical consequence is that prices rise exponentially. 
 This study seeks to expose that landlords are charging way too much for their Airbnb with the hope that rents will fall, fewer Airbnb’s will become available, more buying homes, and at least house prices will not continue to rise.
 
-### Authors
-
-[Annabelle den Heijer](https://github.com/annabelledenh), [Mike Verweij](https://github.com/Mikeverweij96), Sjors Boelaars, Bouke Schippers, [Luc Peeters](https://github.com/LucPeeters21)
-
 ## Repository overview
-
-Provide an overview of the directory structure and files, for example:
 
 ├── README.md
 ├── makefile
@@ -51,13 +44,6 @@ Provide an overview of the directory structure and files, for example:
 code blocks for commands
 ```
 
-### Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
 ### Version History
 
 * 0.2
@@ -66,9 +52,12 @@ command to run if program contains helper info
 * 0.1
     * Initial Release
 
-### License
+## About
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+
+### Authors
+[Annabelle den Heijer](https://github.com/annabelledenh), [Mike Verweij](https://github.com/Mikeverweij96), [Sjors Boelaars](https://github.com/SjorsBoelaars1), [Bouke Schippers](https://github.com/BSchippers1), [Luc Peeters](https://github.com/LucPeeters21)
+
 
 ## Acknowledgments
 
