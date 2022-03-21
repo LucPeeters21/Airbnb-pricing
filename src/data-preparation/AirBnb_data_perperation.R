@@ -80,10 +80,3 @@ airbnb_listings <- airbnb_listings %>% mutate(host_identity_verified=ifelse(host
 table_property_type <-as.data.frame(table(airbnb_listings$property_type))
 table_cut_of<- table_property_type %>% filter(Freq >0.01*nrow(airbnb_listings))
 airbnb_listings <- airbnb_listings %>% mutate(property_type=ifelse(property_type %in% table_cut_of$Var1, property_type, 'Non-common proporty type'))
-
-# test regression
-regression_all <- lm(price_euros~.,airbnb_listings)
-summary(regression_all)
-
-
-
