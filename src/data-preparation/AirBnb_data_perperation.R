@@ -31,6 +31,10 @@ View(airbnb_listings)
 summary(airbnb_listings)
 
 
+#remove possible duplicates:
+airbnb_listings-airbnb_listings %>% filter(!duplicated(airbnb_listings))
+
+
 # Remove dollar signs from price and convert to numeric
 airbnb_listings$price <- (gsub("\\$|,", "", airbnb_listings$price))
 airbnb_listings$host_response_rate <- (gsub("%", "", airbnb_listings$host_response_rate))
