@@ -69,7 +69,7 @@ airbnb_listings <- airbnb_listings %>% filter(price_per_person > 0 & price_per_p
 airbnb_listings %>% group_by(country) %>% summarize_at(vars(price_euros), list(name=mean), na.rm=TRUE) 
 
 # Remove variables that we will not use in analysis
-airbnb_listings <- airbnb_listings %>% select(-X.x, -X.y, -neighbourhood, -maximum_nights, -host_since, -host_listings_count, -amenities, -neighbourhood_cleansed)
+airbnb_listings <- airbnb_listings %>% select(-X.x, -X.y, -neighbourhood, -maximum_nights, -host_since, -host_listings_count, -amenities, -neighbourhood_cleansed, -country)
 
 # Change superhost and identified values
 airbnb_listings <- airbnb_listings %>% mutate(host_is_superhost=ifelse(host_is_superhost == "t", 1,
