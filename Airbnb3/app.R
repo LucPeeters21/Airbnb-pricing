@@ -8,6 +8,7 @@
 #
 
 library(shiny)
+library(shinyWidgets)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -18,7 +19,7 @@ ui <- fluidPage(
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
         sidebarPanel(
-          selectInput(inputId = "city", label = "City",
+          numericInput(inputId = "city", label = "City",
                       choices = c("Antwerp", "Athens", "Barcelona", "Bergamo","Berlin", 
                                   "Bologna", "Bordeaux", "Brussels", "Copenhagen", "Crete", "Euskadi",
                                   "Florence", "Ghent", "Girona", "Lisbon", "Lyon", "Madrid", "Malaga",
@@ -31,7 +32,7 @@ ui <- fluidPage(
                                    "Entire residential home", "Room residential home", 
                                    "Serviced apartment", "Townhouse", "Villa", "Bed and breakfast", 
                                    "Condo", "Other"), selected = "Loft"),
-          checkboxGroupInput("amenties", 
+          checkboxGroupInput("amenities", 
                              h3("Amenities"), 
                              choices = list("Essentials" = 1, "Kitchen" = 2, "Hairdryer" = 3, "Hangers" = 4,
                                             "Airconditioning" = 5, "Dishwasher" = 6, "Free streetparking" = 7,
@@ -43,7 +44,7 @@ ui <- fluidPage(
 
         # Show a plot of the generated distribution
         mainPanel(
-           plotOutput("distPlot")
+           textOutput("selected_amenities")
         )
     )
 )
@@ -51,13 +52,7 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
 
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
+    output$selected_amenities <- renderDataTable({(input$amenities*5)
     })
 }
 
