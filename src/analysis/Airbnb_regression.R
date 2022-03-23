@@ -55,10 +55,12 @@ ggplot(airbnb_listings_without_reviews, aes(log_price_euros))+ geom_histogram(bi
 
 
 # Build regression models with log_price and all variables that might be relevant
-regression_all_with_reviews <- lm(log(price_euros)~ .-id -price - price_per_person -country -log_price_euros -id_check,airbnb_listings_with_reviews)
+regression_all_with_reviews <- lm(log(price_euros)~ .-id -price - price_per_person -log_price_euros -id_check,airbnb_listings_with_reviews)
 summary(regression_all_with_reviews)
-regression_all_without_reviews <- lm(log(price_euros)~ .-id -price - price_per_person -country -log_price_euros -id_check, airbnb_listings_without_reviews)
+regression_all_without_reviews <- lm(log(price_euros)~ .-id -price - price_per_person -log_price_euros -id_check, airbnb_listings_without_reviews)
 summary(regression_all_without_reviews)
+
+# Check assumptions
 
 
 # Create a dataframe with models output

@@ -32,7 +32,7 @@ summary(airbnb_listings)
 
 
 #remove possible duplicates:
-airbnb_listings-airbnb_listings %>% filter(!duplicated(airbnb_listings))
+airbnb_listings <- airbnb_listings %>% filter(!duplicated(airbnb_listings))
 
 
 # Remove dollar signs from price and convert to numeric

@@ -1,12 +1,5 @@
 library(shiny)
 
-#load the variables that were taken into the model and create an empty data frame with these variables as heading (this dataframe will later be used to run the regression on):
-table_heads<-variable_list_with_reviews
-table_heads<-gsub("\\`", "", table_heads) #remove the '`' from the headings, such that they match the headings that the regression will go look for 
-df<- data.frame(matrix(ncol = length(table_heads), nrow = length(cities))) #create empty dataframe on which we will later run the regression
-colnames(df)<-table_heads #change the column names into the required table headings
-
-
 #load the result of the regression:
 regression_output<-df_regression_final
 
@@ -43,7 +36,11 @@ regression_output_hrt$term <- (gsub("host_response_time", "", regression_output_
 host_response_time<-(unique(airbnb_listings$host_response_time))
 host_response_time<-host_response_time[c(1,4,5,6,3,2)] #change the order such that it is more logically
 
-
+#load the variables that were taken into the model and create an empty data frame with these variables as heading (this dataframe will later be used to run the regression on):
+table_heads<-variable_list_with_reviews
+table_heads<-gsub("\\`", "", table_heads) #remove the '`' from the headings, such that they match the headings that the regression will go look for 
+df<- data.frame(matrix(ncol = length(table_heads), nrow = length(cities))) #create empty dataframe on which we will later run the regression
+colnames(df)<-table_heads #change the column names into the required table headings
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
