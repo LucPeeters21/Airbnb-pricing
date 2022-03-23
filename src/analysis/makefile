@@ -4,7 +4,9 @@ ANALYSIS = ../../src/analysis
 
 all: $(TEMP)/
 
-$(TEMP)/: Airbnb_regression.R
+$(TEMP)/: $(ANALYSIS)/Airbnb_regression.R $(DATA)/Airbnb_EU_listings_reduced $(DATA)/Presencematrix_v2.csv
     R --vanilla < $(ANALYSIS)/Airbnb_regression.R
 
-$(ANALYSIS)/Shiny_App_final.R
+
+
+WELKE FILES? NAAM OUTPUT NA "$(TEMP)/"  ZETTEN
