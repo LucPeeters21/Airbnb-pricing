@@ -12,6 +12,6 @@ analysis: data-preparation
 
 clean:
 	-rm -r .DS_Store
-
+	-rm -r $(DATA)
 
 
