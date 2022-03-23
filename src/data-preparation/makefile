@@ -1,9 +1,10 @@
 DATA = ../../data
-TEMP = ../../gen/temp
+PREPARATION = ../../data-preparation
 
-all: $(DATA)/Airbnb_EU_listings_reduced.csv 
+all: $(DATA)/Airbnb_EU_listings_reduced.csv $(DATA)/Presencematrix_v2.csv 
 
-../../data/Airbnb_EU_listings_reduced: download.R
-	mkdir -p ../../data
-	R --vanilla < download.R
+$(DATA)/Airbnb_EU_listings_reduced: $(PREPARATION)/AirBnb_data_preperation.R
+	R --vanilla < $(PREPARATION)/AirBnb_data_preperation.R
 
+$(DATA)/Presencematrix_v2.csv: $(PREPARATION)/AirBnb_data_preperation.R
+	R --vanilla < $(PREPARATION)/AirBnb_data_preperation.R

@@ -28,7 +28,7 @@ This study seeks to expose that landlords are charging way too much for their Ai
 ├── README.md
 ├── makefile
 ├── data
-│   ├── Large_data
+│   └── Large_data
 ├── gen
 │   ├── 
 │   ├── 
