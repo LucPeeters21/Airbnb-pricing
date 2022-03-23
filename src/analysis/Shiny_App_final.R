@@ -1,22 +1,19 @@
 library(shiny)
 
-#load the variables that were taken into the model:
+#load the variables that were taken into the model and create an empty data frame with these variables as heading (this dataframe will later be used to run the regression on):
 table_heads<-variable_list_with_reviews
-table_heads<-gsub("\\`", "", table_heads)
-table_heads
-
-df<- data.frame(matrix(ncol = length(table_heads), nrow = length(cities)))
-colnames(df)<-table_heads
+table_heads<-gsub("\\`", "", table_heads) #remove the '`' from the headings, such that they match the headings that the regression will go look for 
+df<- data.frame(matrix(ncol = length(table_heads), nrow = length(cities))) #create empty dataframe on which we will later run the regression
+colnames(df)<-table_heads #change the column names into the required table headings
 
 
 #load the result of the regression:
 regression_output<-df_regression_final
 
-intercept<-regression_output$estimate[regression_output$term =='(Intercept)']
 
-
-#Since we only select 10 amenities, we know that 2:11 are the amenities:
+#Since we only selected 10 amenities, we know that 2:11 are the amenities:
 regression_output_amenities<-regression_output[2:11,]
+
 
 #Make the amenities text more attractive to present in the app
 regression_output_amenities$term <- (gsub("X.|\\.", "", regression_output_amenities$term))
@@ -40,7 +37,6 @@ regression_output_city$term <- (gsub("city", "", regression_output_city$term))
 cities<-sort(unique(airbnb_listings$city))
 
 
-
 #Clean the host response time variable and create a list of possible host response times:
 regression_output_hrt <- regression_output[regression_output$term %like% "host_response_time",] 
 regression_output_hrt$term <- (gsub("host_response_time", "", regression_output_hrt$term))
@@ -55,7 +51,7 @@ ui <- fluidPage(
   # Application title
   titlePanel("Goodbye to overpriced Airbnbs"),
   
-  # Sidebar with a slider input for number of bins 
+  # Sidebar
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "city", label = "City",
@@ -86,14 +82,13 @@ ui <- fluidPage(
       numericInput(inputId = "location", label = "Review score location", value = 5, min = 0, max = 5),
       numericInput(inputId = "value", label = "Review score value" , value = 5, min = 0, max = 5),
       
-      #     sliderInput(inputId = "Preferred average rating", label = "Preferred average rating", value = c(3, 4), min = 0, max = 5),
       checkboxGroupInput("amenities", 
                          h3("amenities"), 
                          choices = regression_output_amenities$term,
                          selected = regression_output$term[1]),
     ),
     
-    # Show a plot of the generated distribution
+    
     mainPanel(
       textOutput("out"),
       textOutput("extra"),
@@ -111,11 +106,12 @@ server <- function(input, output){
   
   output$out<-renderText({
   
-
+  #safe what amenities the user indicated to be present at the listing
   amenity_present<- regression_output_amenities$term %in% input$amenities
   df[1,1:10]<-as.numeric(amenity_present)
   
-    
+  
+  #safe the other input of the user to the dataframe, such that we can later apply the regression on this dataframe  
   df[1, 'property_type']<- input$"Property type"
   df[1, 'bathrooms_text']<- as.numeric(input$bath)
   df[1, 'room_type']<- input$"Room type"
@@ -126,53 +122,63 @@ server <- function(input, output){
   df[1, 'review_scores_cleanliness']<- as.numeric(input$clean)
   df[1, 'review_scores_location']<- as.numeric(input$location)
   df[1, 'review_scores_value']<- as.numeric(input$value)
-    
+  
+  #define the output:  
   paste("A reasonable price for one night at this Airbnb would be: €",  round(exp(predict(regression_final, newdata = df[1,])),2))
 
   
   })
   
+  
+  #add a extra line that introduces the table:
   output$extra<- renderText({paste(" Below you can find what a reasonable price for a comparable Airbnb in other EU cities would be:")})
   
   
+  #introduce a table in which the user can see the adviced price of comparable airbnb's in other cities:
   output$table <- renderTable({
     
+    
+    #safe what amenities the user indicated to be present at the listing
     amenity_present<- regression_output_amenities$term %in% input$amenities
     df[1,1:10]<-as.numeric(amenity_present)
     
+    
+    #safe the other input of the user to the dataframe, such that we can later apply the regression on this dataframe  
     df[1, 'property_type']<- input$"Property type"
     df[1, 'bathrooms_text']<- as.numeric(input$bath)
     df[1, 'room_type']<- input$"Room type"
     df[1, 'accommodates']<- as.numeric(input$acc)
-    df[1, 'city']<- input$city
     df[1, 'host_response_time']<- input$hrt
     df[1, 'review_scores_rating']<- as.numeric(input$rating)
     df[1, 'review_scores_cleanliness']<- as.numeric(input$clean)
     df[1, 'review_scores_location']<- as.numeric(input$location)
     df[1, 'review_scores_value']<- as.numeric(input$value)    
     
+    
+    
+    #store the possible different cities in the dataframe
     df[1:length(cities),]<-df[1,]
     df[1:length(cities),'city']<-cities
     
+    
+    #create a column in which the predicted regression price can later be stored
     df[,'price']<-0
-    df$'price'<-round(exp(predict(regression_final, newdata = df)),2)
+    df$'price'<-round(exp(predict(regression_final, newdata = df)),2) #run the regression
     
+    
+    #arreange the price column in such a way that the highest price is on the top
     df<- df %>% arrange(desc(price))
-    colnames(df)[which(colnames(df)=='price')] <- 'price (in Euros)'
+    colnames(df)[which(colnames(df)=='price')] <- 'price (in Euros)' #change the column name such that it is less ambiguous
     
     
+    #extract only the relevant columns of the dataframe that we want to show to the user
     df_to_show<-df%>% select(city, 'price (in Euros)')
-    
     df_to_show
     
     })
   
   
-  
-  
 }
-
-
 
 
 # Run the application 
