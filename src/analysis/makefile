@@ -7,4 +7,6 @@ all: $(TEMP)/
 $(TEMP)/: Airbnb_regression.R
     R --vanilla < $(ANALYSIS)/Airbnb_regression.R
 
-$(ANALYSIS)/Shiny_App_final.R
+
+
+WELKE FILES MAKEN WE? DE OUTPUT
