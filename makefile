@@ -1,17 +1,17 @@
-all: analysis data-preparation data-collection
+PREPARATION = ../src/data-preparation
+ANALYSIS = ../src/analysis
+DATA = ../data
 
-data-collection:
-	make -c src/data-collection
+all: analysis data-preparation clean
 
 data-preparation:
-	make -C src/data-preparation
+	make -C $(PREPARATION)
 
 analysis: data-preparation
-	make -C src/analysis
+	make -C $(ANALYSIS)
 
 clean:
-	-rm -r data
-	-rm -r gen
+	-rm -r .DS_Store
 
 
 
