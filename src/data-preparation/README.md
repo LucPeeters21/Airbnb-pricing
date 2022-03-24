@@ -1,8 +1,8 @@
 # Data Preparation: Merging process and data cleaning
 
 ## Content
-1. Merging process
-1.1 Importing the data
+### 1. Merging process
+#### 1.1 Importing the data
 1.2 Drop and add columns before merging
 1.3 Merge data
 1.4 First inspection
