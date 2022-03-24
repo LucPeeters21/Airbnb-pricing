@@ -3,10 +3,10 @@
 ### Table of Contents
 
 #### 1. Merging process
-1.1 Importing the data
-1.2 Drop and add columns before merging
-1.3 Merge data
-1.4 First inspection
+1.1 [Importing the data]
+1.2 [Drop and add columns before merging]
+1.3 [Merge data]
+1.4 [First inspection]
 #### 2. Data cleaning
 2.1 Remove duplicates
 2.2 Remove inconvenient symbols from data
