@@ -1,10 +1,7 @@
-DATA = ../../data
-PREPARATION = ../../data-preparation
+## DATA PREPARATION WORKFLOW ##
 
-all: $(DATA)/Airbnb_EU_listings_reduced.csv $(DATA)/Presencematrix_v2.csv 
 
-$(DATA)/Airbnb_EU_listings_reduced: $(PREPARATION)/AirBnb_data_preperation.R
-	R --vanilla < $(PREPARATION)/AirBnb_data_preperation.R
+all: ../../data/Airbnb_EU_listings_reduced.csv ../../data/Presencematrix_v2.csv 
 
-$(DATA)/Presencematrix_v2.csv: $(PREPARATION)/AirBnb_data_preperation.R
-	R --vanilla < $(PREPARATION)/AirBnb_data_preperation.R
+../../data/Airbnb_EU_listings_reduced Presencematrix_v2.csv: AirBnb_data_preperation.R
+	R --vanilla < AirBnb_data_preperation.R
