@@ -71,7 +71,7 @@ At this point, it was decided that certain variables were not suitable for analy
 The relevant host information about being a superhost and whether the identity of the host is publicly known, appeared in the dataset with the values 't' for true and 'f' for false. These values were changed into '1' for true and '0' for false.
 
 ### 2.10 Create dummy variable for property type
-Since there was wide variation in the 'property type' column, it would be inconvenient to take all into account for regression. Therefore, it was decied that only the property types that appeared in at least 1% of all observations would be kept, creating a variety of property types that are relevant and that can be handled when creating the regression. All observations with a property type appearing in less than 1% were kept in the dataframe, but there property type value was changed to 'non-common property type' in order to not throw away any valuable data. 
+Since there was wide variation in the 'property type' column, it would be inconvenient to take all into account for regression. Therefore, it was decided that only the property types that appeared in at least 1% of all observations would be kept, creating a variety of property types that are relevant and that can be handled when creating the regression. All observations with a property type appearing in less than 1% were kept in the dataframe, but their property type value was changed to 'non-common property type' in order to not throw away any valuable data. 
 
 ![image](https://user-images.githubusercontent.com/98958192/159901924-3ffbc407-c10c-4411-8c93-eff8638f42b7.png)
 
