@@ -1,8 +1,8 @@
-# Data Preparation: Merging process and data cleaning
+# Data Preparation
 
 ## Content
-### 1. Merging process
-#### 1.1 Importing the data
+1. Merging process
+1.1 Importing the data
 1.2 Drop and add columns before merging
 1.3 Merge data
 1.4 First inspection
@@ -20,3 +20,12 @@
 2.10 Create dummy variable for property type
 
 3. After cleaning
+
+
+# Table of Contents
+
+1. [My first title](#my-first-title)
+2. [My second title](#my-second-title)
+## My first title
+Some text.
+## My second title
