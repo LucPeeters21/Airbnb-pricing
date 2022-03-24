@@ -27,20 +27,12 @@ This study seeks to expose that landlords are charging way too much for their Ai
 ```
 ├── README.md
 ├── makefile
-├── data
-│   └── Large_data
-├── gen
-│   ├── 
-│   ├── 
-│   └── 
 └── src
     ├── analysis
     ├── data-preparation
     ├── data-collection
-    └── paper
+    └── pricing-app
 ```
-
-## Running instructions
 
 ### Dependencies
 
@@ -54,11 +46,25 @@ Please follow the installation guide on http://tilburgsciencehub.com/.
 
 ### Running the code
 
-Open your command line/terminal:
+Follow the instructions to run the code:
+1. Fork this repository
+2. Open your command line/terminal:
 
 ```
-code blocks for commands
+clone https://github.com/LucPeeters21/Airbnb-pricing.git
 ```
+3. To directly all code use:
+
+```
+make
+```
+4. After these steps you are now able to run the pricing app in ../src/pricing-app -> pricing_app.R
+
+Another option will be to run all code in the following order:
+- ../src/data-preparation -> data_preparation.R
+- ../src/analysis -> regression.R
+- ../src/pricing-app -> pricing_app.R
+
 
 ## Authors
 
