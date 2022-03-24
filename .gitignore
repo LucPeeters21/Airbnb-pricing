@@ -7,4 +7,4 @@
 *.csv.gz
 .Rproj.user
 *.csv
-*.DS_Store
+.DS_Store
