@@ -1,6 +1,4 @@
-## MAIN WORKFLOW ##
-
-all: analysis data-preparation
+all: data-preparation
 
 data-preparation:
 	make -C src/data-preparation

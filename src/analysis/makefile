@@ -1,6 +1,9 @@
 ## ANALYSIS WORKFLOW ##
 
-all: $(OUTPUT)/Shiny_App_final.R
+DATA = ../src/data
 
-$(OUTPUT)/Shiny_App_final.R: $(ANALYSIS) $(PREPARATION)
-    R --vanilla < $(OUTPUT)/Shiny_App_final.R
+
+all: $(DATA)/regression_output_with_reviews.csv $(DATA)/regression_output_without_reviews.csv
+
+$(DATA)/regression_output_with_reviews.csv $(DATA)/regression_output_without_reviews.csv: regression.R
+    R --vanilla < regression.R
