@@ -31,7 +31,7 @@ Since both datafiles consisted of an identical 'price' column, it was decided to
 ### 1.3 Merge data
 Both dataframes were merged into one dataframe consisting of the original data delivered by Airbnb with additional variables showing the amenitites that are present at each accomodation.
 ### 1.4 First inspection
-After merging the seperate datafiles, a dataframe consisting of 330166 rows with observations, each representing an Airbnb accomodation, was left for further preparation. At this stage, the dataframe had 153 seperate variables. For the amenities, each variable had either a value score of 1 in case that a certain amenity was present at an accomodation and a value score 0 when otherwise.
+After merging the seperate datafiles, a dataframe consisting of 330166 rows with observations, each representing an Airbnb accomodation, was left for further preparation. At this stage, the dataframe had 153 seperate variables, which was mostly due to the large range of amenities. For the amenities, each variable had either a value score of 1 in case that a certain amenity was present at an accomodation and a value score 0 when otherwise.
 
 ## 2. Data cleaning
 
@@ -44,6 +44,9 @@ In this stage, the '$' sign and comma were removed from the 'price' variables in
 ### 2.3 Assure correct data types
 All the variables were changed to correct data types for analysis purposes. All variables what a numeric value were changed into numeric data types after creating a seperate list conisting of these specific variables. Additionaly, the column consisting of the number of bathrooms had to be recoded, since it included text. 
 
+### 2.4 Create values for valutas
+Since all values  in the 'price' column were shown in own valutas, multiple values had to be changed into euros for a number of countries by creating a value that represented the rate of a given currency. This was done for the non-euro countries in the data set: Czech Republic, Sweden and Denmark.
+![image](https://user-images.githubusercontent.com/98958192/159895485-3719cc3e-391f-4460-bf68-ad1061752906.png)
 
 
 
