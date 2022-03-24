@@ -1,12 +1,6 @@
-DATA = ../../data
-TEMP = ../../gen/temp
-ANALYSIS = ../../src/analysis
+## ANALYSIS WORKFLOW ##
 
-all: $(TEMP)/
+all: $(OUTPUT)/Shiny_App_final.R
 
-$(TEMP)/: $(ANALYSIS)/Airbnb_regression.R $(DATA)/Airbnb_EU_listings_reduced $(DATA)/Presencematrix_v2.csv
-    R --vanilla < $(ANALYSIS)/Airbnb_regression.R
-
-
-
-WELKE FILES? NAAM OUTPUT NA "$(TEMP)/"  ZETTEN
+$(OUTPUT)/Shiny_App_final.R: $(ANALYSIS) $(PREPARATION)
+    R --vanilla < $(OUTPUT)/Shiny_App_final.R

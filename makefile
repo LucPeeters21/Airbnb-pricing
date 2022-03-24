@@ -1,17 +1,12 @@
-PREPARATION = ../src/data-preparation
-ANALYSIS = ../src/analysis
-DATA = ../data
+## MAIN WORKFLOW ##
 
-all: analysis data-preparation clean
+all: analysis data-preparation
 
 data-preparation:
-	make -C $(PREPARATION)
+	make -C src/data-preparation
 
 analysis: data-preparation
-	make -C $(ANALYSIS)
+	make -C src/analysis
 
 clean:
-	-rm -r .DS_Store
-	-rm -r $(DATA)
-
-
+	-rm -r data
