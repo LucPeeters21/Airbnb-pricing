@@ -63,8 +63,23 @@ In this stage, an additional column representing the price in euros per person w
 Since there were prices in the dataset that showed either a value of 0 or an extremely high value, it was decided to drop these kind of observations. The cutoff point for this process was set at a minimum of at least 0 and a maximum of 1500 in terms of price in euros per person. This process caused a decrease in the number of observations, leaving the dataset with a total of "......." rows.
 
 ### 2.8 Remove variables that will not be used in analysis
-At this point, it was decided that certain variables were not suitable for analysis and therefore had to be removed from the dataset. 
+At this point, it was decided that certain variables were not suitable for analysis and therefore had to be removed from the dataset. This included unnecessary host information and variables that overlapped with others. For this purpose, the country and neighbourhood variables were removed, since they would overlap with the 'city' column. Additionaly, the column that consisted of the list of amenities, which had already been turned into seperate columns, was removed. 
+
 ![image](https://user-images.githubusercontent.com/98958192/159900303-2e35caa9-4164-4036-b6a3-507809e55687.png)
+
+### 2.9 Change values of host information
+The relevant host information about being a superhost and whether the identity of the host is publicly known, appeared in the dataset with the values 't' for true and 'f' for false. These values were changed into '1' for true and '0' for false.
+
+### 2.10 Create dummy variable for property type
+Since there was wide variation in the 'property type' column, it would be inconvenient to take all into account for regression. Therefore, it was decied that only the property types that appeared in at least 1% of all observations would be kept, creating a variety of property types that are relevant and that can be handled when creating the regression. All observations with a property type appearing in less than 1% were kept in the dataframe, but there property type value was changed to 'non-common property type' in order to not throw away any valuable data. 
+
+![image](https://user-images.githubusercontent.com/98958192/159901924-3ffbc407-c10c-4411-8c93-eff8638f42b7.png)
+
+## 3. Wrap-up inspection
+The dataset after cleaning consisted of 328564 rows with 146 different columns. Each row represented in an accomodation in one of the 13 countries taken into account for the analysis. 
+
+
+
 
 
 
