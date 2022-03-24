@@ -46,8 +46,9 @@ All the variables were changed to correct data types for analysis purposes. All 
 
 ### 2.4 Create values for valutas
 Since all values  in the 'price' column were shown in own valutas, multiple values had to be changed into euros for a number of countries by creating a value that represented the rate of a given currency. This was done for the non-euro countries in the data set: Czech Republic, Sweden and Denmark.
-![image](https://user-images.githubusercontent.com/98958192/159895485-3719cc3e-391f-4460-bf68-ad1061752906.png)
 
+![image](https://user-images.githubusercontent.com/98958192/159895485-3719cc3e-391f-4460-bf68-ad1061752906.png)
+Note that the currency rates of valutas fluctuate over time. The currency rates used in the dataset are from the same period as the delivered from Airbnb.
 
 
 
