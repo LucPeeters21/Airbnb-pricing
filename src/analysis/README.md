@@ -1,4 +1,4 @@
-#Analysis
+###Analysis
 ## Type of analysis
 To examine the relationship between the metric dependent variable and the XX independent variables, a multiple linear regression has been performed. This enables us to account for all important factors and get a precise understanding of the relationship between each individual factor and the price of an Airbnb.
 
