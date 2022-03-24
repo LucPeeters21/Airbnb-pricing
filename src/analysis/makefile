@@ -1,6 +1,6 @@
 ## ANALYSIS WORKFLOW ##
 
-DATA = ../src/data
+DATA = ../../data
 
 
 all: $(DATA)/regression_output_with_reviews.csv $(DATA)/regression_output_without_reviews.csv
