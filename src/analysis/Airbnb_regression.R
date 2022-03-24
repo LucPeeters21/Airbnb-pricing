@@ -4,6 +4,7 @@ library(dplyr)
 library(ggplot2)
 library(car)
 library(rms)
+library(ggfortify)
 #install.packages('data.table')
 library(data.table)
 #### What drives the price of Airbnb accomodations?
@@ -60,8 +61,21 @@ summary(regression_all_with_reviews)
 regression_all_without_reviews <- lm(log(price_euros)~ .-id -price - price_per_person -log_price_euros -id_check, airbnb_listings_without_reviews)
 summary(regression_all_without_reviews)
 
-# Check assumptions
+## Check assumptions
+residuals_with_reviews <- regression_all_with_reviews$residuals
 
+# Check residual vs. fitted plot
+###
+
+# Check for normality
+qqPlot(regression_all_with_reviews)
+
+# Check for heteroscedasticity for both regressions with and without reviews
+residuals_with_reviews <- regression_all_with_reviews$residuals
+ggplot(regression_all_with_reviews, aes(x=log_price_euros, y=residuals_with_reviews))+ geom_point()
+
+residuals_without_reviews <- regression_all_without_reviews$residuals
+ggplot(regression_all_without_reviews, aes(x=log_price_euros, y=residuals_without_reviews))+ geom_point()
 
 # Create a dataframe with models output
 df_regression_with_reviews <- tidy(regression_all_with_reviews)
