@@ -1,7 +1,7 @@
 # Airbnb - Don't Pay Too Much
 ### Goodbye to overpriced Airbnbs
 
-For a research project on estimating the effects of different amenities on the price of an Airbnb, we created a tool which enables people to compare the price of a certain Airbnb to other comparable Airbnb's (based on amenties). This can prevent people from paying too much when there are better alternatives.
+For a research project on estimating the effects of different amenities on the price of an Airbnb, we created a tool which enables people to compare the price of a certain Airbnb to other comparable Airbnb's (based on amenities). This can prevent people from paying too much when there are better alternatives.
 
 
 ## Motivation
