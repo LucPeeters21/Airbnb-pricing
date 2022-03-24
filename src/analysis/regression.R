@@ -109,6 +109,6 @@ df_regression_final <- tidy(regression_final)
 df_regression_final <- tidy(regression_final_wor)
 
 
-write.csv2(df_regression_final, file = "regression_output_with_reviews.csv")
-write.csv2(df_regression_final, file = "regression_output_without_reviews.csv")
+write.csv2(df_regression_final, file = "../../data/regression_output_with_reviews.csv")
+write.csv2(df_regression_final, file = "../../data/regression_output_without_reviews.csv")
 
