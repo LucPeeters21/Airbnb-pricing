@@ -28,7 +28,6 @@ summary(regression_all_with_reviews)
 regression_all_without_reviews <- lm(log(price_euros)~ .-id -price - price_per_person -log_price_euros -id_check, airbnb_listings_without_reviews)
 summary(regression_all_without_reviews)
 
-
 ## Check assumptions
 autoplot(regression_all_with_reviews) #linear, normal and equal variances
 autoplot(regression_all_without_reviews)
