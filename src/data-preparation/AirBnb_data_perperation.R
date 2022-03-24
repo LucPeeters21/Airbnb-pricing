@@ -85,3 +85,31 @@ airbnb_listings <- airbnb_listings %>% mutate(host_identity_verified=ifelse(host
 table_property_type <-as.data.frame(table(airbnb_listings$property_type))
 table_cut_of<- table_property_type %>% filter(Freq >0.01*nrow(airbnb_listings))
 airbnb_listings <- airbnb_listings %>% mutate(property_type=ifelse(property_type %in% table_cut_of$Var1, property_type, 'Non-common proporty type'))
+
+#Check if we have a lot of missing values (ignoring these could create a bias if it occurs at more than 5% of the cases)
+df_missing_values<-as.data.frame(sapply(airbnb_listings, function(x) sum(is.na(x))))
+View(df_missing_values)
+
+
+#We observe that for 33% of cases the response rate is not recorded and bedrooms is missing at 6% of the cases.
+#Since we have other variables that represent the service level of the host and we have other variables thar represent the capacity of a listing, we decide to remove both variables from the analysis.
+airbnb_listings<-airbnb_listings%>% select(-c(host_response_rate, bedrooms))
+
+
+#Moreover, we observe that at 21% of cases there are no reviews available. Since we dont have any other variables that indicate customer satisfaction, we inspect this variable in more dept:
+#We investigate if there is a significant price difference between listings with reviews and listings without:
+airbnb_listings_with_reviews<-airbnb_listings%>% filter(!is.na(review_scores_value))
+mean(airbnb_listings_with_reviews$price_euros)
+
+airbnb_listings_without_reviews<-airbnb_listings%>% filter(is.na(review_scores_value))
+mean(airbnb_listings_without_reviews$price_euros)
+
+
+#Since we observe a significant price difference between cases with reviews and cases without, we decide to split the analysis between both groups.
+#First, we remove the review columns for the dataframe where the reviews are NA:
+airbnb_listings_without_reviews<-airbnb_listings_without_reviews%>% select(-c(review_scores_value, review_scores_location, review_scores_checkin, review_scores_communication, review_scores_accuracy, review_scores_accuracy, review_scores_cleanliness, review_scores_rating, reviews_per_month))
+
+
+#Next, we check if we no longer have missing values that cause more than 5% of data to be removed from analysis:
+df_missing_values_with_reviews<-as.data.frame(sapply(airbnb_listings_with_reviews, function(x) sum(is.na(x))))
+df_missing_values_without_reviews<-as.data.frame(sapply(airbnb_listings_without_reviews, function(x) sum(is.na(x))))
