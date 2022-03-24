@@ -24,9 +24,12 @@
 ## 1. Merging process
 
 ### 1.1 Importing the data
-This process was done by downloading the files consisting of the Airbnb data and the scraped data with additional info from the groups's Google Drive. Both files where then saved into seperate dataframes and
+This process was done by downloading the files consisting of the Airbnb data and the scraped data with additional info from the groups's Google Drive. Both files where then saved into seperate dataframes, one consisting of delivered data from Airbnb (airbnb_listings) and on consisting of scraped data with amenitities belonging to each observation in the data (airbnb_amenities).
 ![image](https://user-images.githubusercontent.com/98958192/159884510-5a937464-1a0e-4a71-b4a9-7bc2dfe17051.png)
-
+### 1.2 Drop and add columns before merging
+Since both datafiles consisted of an identical 'price' column, it was decided to drop this column from airbnb_amenities before merging them into one dataframe. Additionaly, a new column consisting of the unique id of each observation was added to check whether the data was still framed well after merging. 
+### 1.3 Merge data
+Both data
 
 
 
