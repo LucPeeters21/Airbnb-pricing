@@ -48,8 +48,23 @@ All the variables were changed to correct data types for analysis purposes. All 
 Since all values  in the 'price' column were shown in own valutas, multiple values had to be changed into euros for a number of countries by creating a value that represented the rate of a given currency. This was done for the non-euro countries in the data set: Czech Republic, Sweden and Denmark.
 
 ![image](https://user-images.githubusercontent.com/98958192/159895485-3719cc3e-391f-4460-bf68-ad1061752906.png)
+
 Note that the currency rates of valutas fluctuate over time. The currency rates used in the dataset are from the same period as the delivered from Airbnb.
 
+### 2.5 Convert prices of non-euro countries
+The values in the 'price' column for the accomodations in Czech Republic, Sweden and Denmark were converted into euros by using the mentioned values and taking the product of these values and the prices of their own respective currency rate. In thise stage, an additional column consisting of the price in euros was created to check whether the convertions to euro were handled correctly.
+
+![image](https://user-images.githubusercontent.com/98958192/159897524-5f0e2e3f-4e14-4132-a6a3-766ee3aa1f03.png)
+
+### 2.6 Check data for face validity
+In this stage, an additional column representing the price in euros per person was created. Using this variable, the mean price per person for each country was calculated to check whether the prices seemed to be realistic. Since this wasn't the case for certain countries, it was concluded that there had to be a number of extreme outliers in the 'price' column.
+
+### 2.7 Remove extreme outliers from dataframe
+Since there were prices in the dataset that showed either a value of 0 or an extremely high value, it was decided to drop these kind of observations. The cutoff point for this process was set at a minimum of at least 0 and a maximum of 1500 in terms of price in euros per person. This process caused a decrease in the number of observations, leaving the dataset with a total of "......." rows.
+
+### 2.8 Remove variables that will not be used in analysis
+At this point, it was decided that certain variables were not suitable for analysis and therefore had to be removed from the dataset. 
+![image](https://user-images.githubusercontent.com/98958192/159900303-2e35caa9-4164-4036-b6a3-507809e55687.png)
 
 
 
