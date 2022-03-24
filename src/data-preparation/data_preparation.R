@@ -10,12 +10,13 @@ library(googledrive)
 
 # Import data
 data_id <-"1Tek0FsrdpnnvzQukog_lmtWAHHvhJJUQ" #the id of the dataset
-drive_download(as_id(data_id), path = "eu_listings.csv", overwrite = TRUE) #download the data from the drive
-airbnb_listings<-read.csv("eu_listings.csv", sep=";") #save the data in a dataframe
+dir.create("../../data/")
+drive_download(as_id(data_id), path = "../../data/eu_listings.csv", overwrite = TRUE) #download the data from the drive
+airbnb_listings<-read.csv("../../data/eu_listings.csv", sep=";") #save the data in a dataframe
 
 data_id_2 <-"15TYK8aDRcJwdPgaNWdu8NSbQVNgTMgqN" #the id of the dataset
-drive_download(as_id(data_id_2), path = "presencematrix.csv", overwrite = TRUE) #download the data from the drive
-airbnb_amenities<-read.csv("presencematrix.csv", sep=";") #save the data in a dataframe
+drive_download(as_id(data_id_2), path = "../../data/presencematrix.csv", overwrite = TRUE) #download the data from the drive
+airbnb_amenities<-read.csv("../../data/presencematrix.csv", sep=";") #save the data in a dataframe
 
 # Drop 'price' column from 'airbnb_amenities'
 airbnb_amenities <- airbnb_amenities %>% select(-price)

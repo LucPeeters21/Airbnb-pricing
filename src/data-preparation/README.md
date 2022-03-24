@@ -27,12 +27,12 @@
 This process was done by downloading the files consisting of the Airbnb data and the scraped data with additional info from the groups's Google Drive. Both files where then saved into seperate dataframes, one consisting of delivered data from Airbnb (airbnb_listings) and on consisting of scraped data with amenitities belonging to each observation in the data (airbnb_amenities).
 ```
 data_id <-"1Tek0FsrdpnnvzQukog_lmtWAHHvhJJUQ" #the id of the dataset
-drive_download(as_id(data_id), path = "Airbnb_EU_listings_reduced.csv", overwrite = TRUE) #download the data from the drive
-airbnb_listings<-read.csv("Airbnb_EU_listings_reduced.csv", sep=";") #save the data in a dataframe
+drive_download(as_id(data_id), path = "eu_listings.csv", overwrite = TRUE) #download the data from the drive
+airbnb_listings<-read.csv("eu_listings.csv", sep=";") #save the data in a dataframe
 
 data_id_2 <-"15TYK8aDRcJwdPgaNWdu8NSbQVNgTMgqN" #the id of the dataset
-drive_download(as_id(data_id_2), path = "Presencematrix_v2.csv", overwrite = TRUE) #download the data from the drive
-airbnb_amenities<-read.csv("Presencematrix_v2.csv", sep=";") #save the data in a dataframe
+drive_download(as_id(data_id_2), path = "presencematrix.csv", overwrite = TRUE) #download the data from the drive
+airbnb_amenities<-read.csv("presencematrix.csv", sep=";") #save the data in a dataframe
 ```
 ### 1.2 Drop and add columns before merging
 Since both datafiles consisted of an identical 'price' column, it was decided to drop this column from airbnb_amenities before merging them into one dataframe. Additionaly, a new column consisting of the unique id of each observation was added to check whether the data was still framed well after merging. 
