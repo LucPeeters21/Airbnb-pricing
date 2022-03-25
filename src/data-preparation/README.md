@@ -18,6 +18,7 @@
 - 2.8 Remove variables that will not be used in analysis
 - 2.9 Change values of host information
 - 2.10 Create dummy variable for property type
+- 2.11 Check for missing values
 #### 3. Wrap-up inspection
 - 3.1 Wrap-up inspection
 
@@ -91,8 +92,32 @@ table_cut_of<- table_property_type %>% filter(Freq >0.01*nrow(airbnb_listings))
 airbnb_listings <- airbnb_listings %>% mutate(property_type=ifelse(property_type %in% table_cut_of$Var1, property_type, 
                    'Non-common proporty type'))
 ```
+
+### 2.11 Check for missing values 
+It was observed that in 33% of the cases the host response rate is not recorded. Additionally, the value of bedrooms is missing in 6% of the cases. Since there are other variables present in the dataset that are able to capture the service of the host and the capacity of an accomodation, it was decided to remove these two variables from the dataset. 
+
+Moreover, it was also observed that review scores are absent in 21% of the observations. In this case, there is no other variable in the dataset that captures consumers' opinion about an accomodation. Therefore, it is essential to keep this variable in the dataset. Since it is impossible to ignore the amount of missing values in this variable, it was decided to take a closer look into the reviews. It was observed that there is a significant difference between the price of accomodations with a review score, and accomodations without a review score. Therefore, the analysis will consist of two parts, one part for listings with a review score and the other part for listings without a review score.
+
+```
+airbnb_listings_with_reviews<-airbnb_listings%>% filter(!is.na(review_scores_value))
+mean(airbnb_listings_with_reviews$price_euros)
+
+airbnb_listings_without_reviews<-airbnb_listings%>% filter(is.na(review_scores_value))
+mean(airbnb_listings_without_reviews$price_euros)
+```
+After creating these two different datasets, all variables regarding review scores were removed from the dataset without reviews. To wrap things up concerning the preparation of the data, a last check was done to see if there were no more missing values that cause more than 5% of the data to be removed from analysis for both datasets:
+```
+df_missing_values_with_reviews<-as.data.frame(sapply(airbnb_listings_with_reviews, function(x) sum(is.na(x))))
+df_missing_values_without_reviews<-as.data.frame(sapply(airbnb_listings_without_reviews, function(x) sum(is.na(x))))
+```
+
 ## 3. Wrap-up inspection
-The dataset after cleaning consisted of 328564 rows with 146 different columns. Each row represented in an accomodation in one of the 13 countries taken into account for the analysis. 
+After cleaning the data, two seperate datasets remained:
+
+- airbnb_listings_with_reviews -> 258974 observations with 144 variables
+- airbnb_listings_without_reviews -> 69589 observations with 136 variables
+
+These two dataframes were used for the analysis and the creation of the dynamic estimation tool.
 
 
 
