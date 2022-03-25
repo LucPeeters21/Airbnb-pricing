@@ -5,9 +5,8 @@ library(shiny)
 ######################
 
 # load the result of the regression
-regression_output_wr<-df_regression_final_with_reviews
-regression_output_wor<-df_regression_final_without_reviews
-
+regression_output_wr<- read.csv("../../data/regression_output_with_reviews.csv", fileEncoding = "UTF-8")
+regression_output_wor<- read.csv("../../data/regression_output_without_reviews.csv", fileEncoding = "UTF-8")
 
 # select the amenities (since we only selected 10 amenities, we know that 2:11 are the amenities)
 regression_output_amenities_wr<-regression_output_wr[2:11,]
@@ -223,3 +222,5 @@ server <- function(input, output, session){
 
 # run the application 
 shinyApp(ui = ui, server = server)
+
+write.csv(regression_output_wr, file= "../../data/regression_output_wr.csv", fileEncoding = "UTF-8")
