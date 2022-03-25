@@ -45,7 +45,7 @@ After merging the seperate datafiles, a dataframe consisting of 330166 rows with
 ## 2. Data cleaning
 
 ### 2.1 Remove duplicates
-The first step in the data cleaning process was to check for duplicates in the observations, in which no observations were found.
+The first step in the data cleaning process was to check for duplicates in the dataframe, in which 2 observations were removed.
 
 ### 2.2 Remove inconvenient symbols from data
 In this stage, the '$' sign and comma were removed from the 'price' variables in order to only remain numbers for each observation that represent the price of an accomodation. Additionaly, the '%' sign was removed from 'host_response_rate' for the same purpose.
