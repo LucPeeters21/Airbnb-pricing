@@ -114,8 +114,8 @@ df_missing_values_without_reviews<-as.data.frame(sapply(airbnb_listings_without_
 ## 3. Wrap-up inspection
 After cleaning the data, two seperate datasets remained:
 
-airbnb_listings_with_reviews -> 258974 observations with 144 variables
-airbnb_listings_without_reviews -> 69589 observations with 136 variables
+- airbnb_listings_with_reviews -> 258974 observations with 144 variables
+- airbnb_listings_without_reviews -> 69589 observations with 136 variables
 
 These two dataframes were used for the analysis and the creation of the dynamic estimation tool.
 
