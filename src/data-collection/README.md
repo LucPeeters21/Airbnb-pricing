@@ -2,8 +2,8 @@
 
 Data was retrieved from Inside Airbnb, with additional data collected by scraping amenitities of the accomodations that were listed on the Inside Airbnb datafile. The result consisted of two seperate datafiles. The datafile retrieved from Inside Airbnb consisted of 31 variables that were further used in the preparation and analysis of the data. The 'amenities' variable is represented in this datafile as a list, but in the scraped datafile each amenity is represented as a seperate variable. The table shows each variable and description of the datafile as retrieved from Airbnb.
 
-| Variable                       | Description                                |
-| -------------------------------| -------------------------------------------|
+|Variable                        |Description                                 |
+|--------------------------------|--------------------------------------------|
 |id                              |Unique identifier of listing                |
 |host_since                      |Date the host was created                   |
 |host_response_time              |Time after which a host responds            |
