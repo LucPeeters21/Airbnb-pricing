@@ -1,4 +1,4 @@
-all: data-preparation analysis 
+all: data-preparation analysis pricing-app
 
 data-preparation:
 	make -C src/data-preparation
