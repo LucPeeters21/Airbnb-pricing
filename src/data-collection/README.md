@@ -2,7 +2,7 @@
 
 The data collection consists of two files. The first file, inside_airbnb_link_scraper.py, is a program that is used to scrape the data download links of all cities that are listed on the website [Inside Airbnb](http://insideairbnb.com/get-the-data.html). The second file, data_download.R, is a program that downloads the datasets from the aforementioned data download links and merges the datasets together into one file. 
 
-This datasets that were downloaded from Inside Airbnb contain 31 variables that were further used in the preparation and analysis of the data. Below table shows a description of these variables. 
+The datasets that were downloaded from Inside Airbnb contain 31 variables that were further used in the preparation and analysis of the data. Below table shows a description of these variables. 
 
 |Variable                        |Description                                 |
 |--------------------------------|--------------------------------------------|
