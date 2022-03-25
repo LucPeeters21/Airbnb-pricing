@@ -11,6 +11,10 @@ library(data.table)
 ### REGRESSION #######
 ######################
 
+# Load data so the make file recognizes the variables
+airbnb_listings_with_reviews <- read.csv("../../data/listings_with_reviews.csv", fileEncoding = "UTF-8") 
+airbnb_listings_without_reviews <- read.csv("../../data/listings_without_reviews.csv", fileEncoding = "UTF-8")
+
 # check for normality of price (the DV)
 ggplot(airbnb_listings_with_reviews, aes(price_euros))+ geom_histogram(binwidth = 50) + xlim(0, 22191) + ylim(0, 2700) # non-normal
 ggplot(airbnb_listings_without_reviews, aes(price_euros))+ geom_histogram(binwidth = 50) + xlim(0, 22191) + ylim(0, 2700) # non-normal
@@ -30,8 +34,8 @@ summary(regression_all_without_reviews)
 
 
 ## check assumptions
-autoplot(regression_all_with_reviews) #linear, normal and equal variances
-autoplot(regression_all_without_reviews)
+autoplot(regression_all_with_reviews) #linear, normal and approximately equal variances
+autoplot(regression_all_without_reviews) #linear, normal and approximately equal variances
 
 
 # create a dataframe with models output
