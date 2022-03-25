@@ -8,25 +8,27 @@ To visually check the assumptions a few plots have been created using the follow
 autoplot(regression_all_with_reviews)
 autoplot(regression_all_without_reviews
 ```
-### Linearity
-The first assumption that was checked was linearity, to check this assumption we used a plot which shows the residuals and the fitted values. Visually checking, the residuals seem to bounce randomly around the zero line whichs suggests that the assumption of linearity is reasonable.
+The plots on the left are the plots of the regression with reviews and the plots on the right of the regression without reviews.
 
-![residuals vs  fitted values](https://user-images.githubusercontent.com/98892780/160018936-3f2d3725-676a-4fa2-8101-95df6c0b5ac2.PNG)
+### Linearity
+The first assumption that was checked was linearity, to check this assumption we used a plot which shows the residuals and the fitted values. Visually checking, the residuals seem to bounce randomly around the zero line for both regressions which suggests that the assumption of linearity is reasonable.
+
+![residualsvsfitted1](https://user-images.githubusercontent.com/98892780/160093851-7a056a3a-3137-41eb-94a9-c953bfe34b59.PNG)![residualsvsfitted2](https://user-images.githubusercontent.com/98892780/160093885-6edc48ae-7084-4535-a8ab-4c2c7c6b3dd4.PNG)
 
 
 ### Normality
-The second assumption that was checked is whether the dependent variable was normally distributed. After plotting the distribution of the dependent variable it showed us that it was not normally distributed. Since the dependent variable was not normally distributed, we took the natural logarithm of the variable which made the distribution more symmetric. We also examined whether the residuals were normally distributed by using a QQ-plot. The QQ-plot shows that most of the residuals are close to the diagonal line, except for really low and really high prices. For these price levels the residuals are not normally distributed which means that this may lead to less precise predictions of the price calculator for these price levels. 
+The second assumption that was checked is whether the dependent variable was normally distributed. After plotting the distribution of the dependent variable it showed us that it was not normally distributed. Since the dependent variable was not normally distributed, we took the natural logarithm of the variable which made the distribution more symmetric. We also examined whether the residuals were normally distributed by using a QQ-plot. Both QQ-plots show that most of the residuals are close to the diagonal line, except for really low and really high prices. For these price levels the residuals are not normally distributed which means that this may lead to less precise predictions of the price calculator for these price levels. 
 
-![QQ-plot](https://user-images.githubusercontent.com/98892780/160019069-bd3a02d9-6d83-4262-a416-e6f583ba000b.png)
+![QQ-plot1](https://user-images.githubusercontent.com/98892780/160093912-7b6f86d7-7f84-4916-abb4-df7ad4e81a88.PNG)![QQ-plot2](https://user-images.githubusercontent.com/98892780/160093935-2dce8b73-f915-48eb-aa8b-03a7e0d60f60.PNG)
 
 
 ### Homoscedasticity
-The last assumption, the assumption of homoscedasticity was checked to see whether the error term is the same across all variables. This was done by using a scale-location plot in which we can visually check if there is any pattern that stands out. In our case the horizontal line stays almost flat and we can see random spread point which indicates that the assumption of homoscedasticity is satisfied.
+The last assumption, the assumption of homoscedasticity was checked to see whether the error term is the same across all variables. This was done by using a scale-location plot in which we can visually check if there is any pattern that stands out. In both regressions the horizontal line is almost flat and we can see random spread points which indicates that the assumption of homoscedasticity is satisfied.
 
-![scale-location plot](https://user-images.githubusercontent.com/98892780/160019126-7fda9609-6ed3-4bb7-8591-bfffc9c43b36.PNG)
+![scale-location plot1](https://user-images.githubusercontent.com/98892780/160093996-f24cdd98-d8a0-485d-bd8b-e83d7a5e7b17.PNG)![scale-location plot2](https://user-images.githubusercontent.com/98892780/160094175-59e164fa-2b8f-481a-83c8-5800d546d280.PNG)
 
 
 ## Regression analysis
-After creating two datasets, with and without reviews, the regression was performed. The regression also showed that a lot of the amenities were insignificant and some were significant but only had an very small effect. Therefore the decision was made to only use amenities with a p-value smaller than 0.05 and an effect that is bigger than 0.075 for the regression. This led to a final dataset for the regression with XX predictors for the price of an Airbnb. 
+After creating the two datasets, with and without reviews, the regression was performed. The regression also showed that a lot of the amenities were insignificant and some were significant but only had an very small effect. Therefore the decision was made to only use amenities with a p-value smaller than 0.05 and an effect that is bigger than 0.075 for the regression. This led to a final dataset for the regression with XX predictors for the price of an Airbnb. 
 
-The regression was performed and was written to a csv file which will be used as input for the dashboard for calculating a reasonable price for an Airbnb. In this analysis we can give an example of what the effect of one or multiple of the independent variables on the price of an Airbnb is, but it is much more interesting to do this yourself by opening the Shiny app and selecting some of the independent variables. The price calculator will then calculate a reasonable price for the Airbnb in the city and with the amenities you have selected. Go check it out! --> [Airbnb price calculator](https://github.com/LucPeeters21/Airbnb-pricing/tree/main/src/pricing-app).
+The regression was performed and was written to a csv file which has been used as input for the dashboard for calculating a reasonable price for an Airbnb. In this analysis we can give an example of what the effect of one or multiple of the independent variables on the price of an Airbnb is, but it is much more interesting to do this yourself by opening the Shiny app and selecting some of the independent variables. The price calculator will then calculate a reasonable price for the Airbnb in the city and with the amenities you have selected. Go check it out! --> [Airbnb price calculator](https://github.com/LucPeeters21/Airbnb-pricing/tree/main/src/pricing-app).
