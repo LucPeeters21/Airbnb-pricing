@@ -14,7 +14,7 @@ The data used in the research is gathered from [InsideAirbnb](http://insideairbn
 
 ## Research method 
 
-To collect the required data, a web-scraper was build that collects all data sets of EU cities published on [InsideAirbnb](http://insideairbnb.com/get-the-data.html). With the downloaded data, several new variables are created that represent interesting characteristics of Airbnb listings. This data will be used as explanatory variables for price, and by using linear regressions, the significance and the size of the effect can be determined for a variety of circumstances.
+To collect the required data, a web-scraper was build that collects all data sets of EU cities published on [InsideAirbnb](http://insideairbnb.com/get-the-data.html). With the downloaded data, several new variables are created that represent interesting characteristics of Airbnb listings. This data will be used as explanatory variables for price, by applying linear regression. With linear regression, a model can be made that predicts a price based on the characteristics of a listing. This model can later be used to indicate to the users of our app what a reasonable price would be for a certain listing.
 
 ## Relevance
 
