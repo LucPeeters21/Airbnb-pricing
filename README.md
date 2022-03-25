@@ -63,6 +63,7 @@ Another option will be to run all code in the following order:
 - ../src/analysis -> regression.R
 - ../src/pricing-app -> pricing_app.R
 
+#### Running the data collection and amenities matrix preparation
 Note: Above worflow skips the data collection step and the preparation of the amenities matrix. Running these steps typically takes around 20 hours in total. Therefore, the output files of these two steps are stored on our shared google drive folder, from which they are downloaded in the data_preparation file. If one is interested in running these steps too, one should run below files in the following order:
 - ../src/data-collection -> Inside_Airbnb_link_scraper.py
 - ../src/data-collection -> data_download.R
