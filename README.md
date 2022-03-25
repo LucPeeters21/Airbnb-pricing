@@ -26,9 +26,9 @@ This research is particularly relevant for tourists planning to book an Airbnb. 
 ├── README.md
 ├── makefile
 └── src
+    ├── analysis
     ├── data-collection
     ├── data-preparation
-    ├── analysis
     └── pricing-app
 ```
 
