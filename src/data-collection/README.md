@@ -1,6 +1,8 @@
 # Data Collection
 
-Data was retrieved from Inside Airbnb, with additional data collected by scraping amenitities of the accomodations that were listed on the Inside Airbnb datafile. The result consisted of two seperate datafiles. The datafile retrieved from Inside Airbnb consisted of 31 variables that were further used in the preparation and analysis of the data. The 'amenities' variable is represented in this datafile as a list, but in the scraped datafile each amenity is represented as a seperate variable. The table shows each variable and description of the datafile as retrieved from Airbnb.
+The data collection consists of two files. The first file, inside_airbnb_link_scraper.py, is a program that is used to scrape the data download links of all cities that are listed on the website [Inside Airbnb](http://insideairbnb.com/get-the-data.html). The second file, data_download.R, is a program that downloads the datasets from the aforementioned data download links and merges the datasets together into one file. 
+
+This combined dataset consisted of 31 variables that were further used in the preparation and analysis of the data. Below table shows a description of these variables. 
 
 |Variable                        |Description                                 |
 |--------------------------------|--------------------------------------------|
