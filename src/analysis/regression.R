@@ -94,6 +94,7 @@ summary(regression_final_without_reviews)
 df_regression_final_with_reviews <- tidy(regression_final_with_reviews)
 df_regression_final_without_reviews <- tidy(regression_final_without_reviews)
 
+
 # save the regression output of both models
 write.csv2(df_regression_final_with_reviews, file = "../../data/regression_output_with_reviews.csv")
 write.csv2(df_regression_final_without_reviews, file = "../../data/regression_output_without_reviews.csv")
