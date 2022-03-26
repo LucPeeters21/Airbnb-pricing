@@ -132,6 +132,6 @@ airbnb_listings_without_reviews<-airbnb_listings_without_reviews%>% select(-c(re
 df_missing_values_with_reviews<-as.data.frame(sapply(airbnb_listings_with_reviews, function(x) sum(is.na(x))))
 df_missing_values_without_reviews<-as.data.frame(sapply(airbnb_listings_without_reviews, function(x) sum(is.na(x))))
 
-# save the regression output of both models
+# save both datasets
 write.csv(airbnb_listings_with_reviews, file = "../../data/listings_with_reviews.csv", fileEncoding = "UTF-8")
 write.csv(airbnb_listings_without_reviews, file = "../../data/listings_without_reviews.csv", fileEncoding = "UTF-8")
