@@ -72,6 +72,7 @@ clone https://github.com/{your username}/Airbnb-pricing.git
 make
 ```
 4. After running all code a http link is generated. Copy paste this link in your browser to launch the app.
+    Note: do not close the command line/terminal before you are finished with using the app. When the command line/terminal is closed, the website will not be available     anymore.
 
 Another option will be to run all code in the following order:
 - ../src/data-preparation -> data_preparation.R
