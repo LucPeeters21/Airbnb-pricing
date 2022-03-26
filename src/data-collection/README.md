@@ -21,7 +21,7 @@ The datasets that were downloaded from Inside Airbnb contain 31 variables that w
 |bathrooms_text                  |Number of bathrooms                         |
 |bedrooms                        |Number of bedrooms                          |
 |beds                            |Number of beds                              |
-|amenities                       |Additional specifications of listing,       |
+|amenities                       |Additional specifications of listing        |
 |price                           |Daily price in local currency               |
 |minimum_nights                  |Minimum nights a guest can stay             |
 |maximum_nights                  |Maximum nights a guest can stay             |
