@@ -39,6 +39,7 @@ Please follow the installation guide on http://tilburgsciencehub.com/.
 - Python. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/python/).
 - R. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/).
 - Make. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/).
+
 - For Python, make sure you have installed below packages:
 ```
 pip install bs4
