@@ -1,6 +1,19 @@
+#install.packages("googledrive")
+#install.packages('data.table')
+#install.packages("tidypredict")
 library(tidypredict)
 library(yaml)
+library(dplyr)
 library(shiny)
+library(data.table)
+library(broom)
+library(haven)
+library(ggfortify)
+library(ggplot2)
+library(car)
+library(readxl)
+library(base)
+library(googledrive)
 
 ######################
 ### SHINY APP ########
@@ -191,14 +204,14 @@ server <- function(input, output, session){
     df<-df_creator(variable_list_without_reviews[,'x'], cities, regression_output_amenities_wor, input, regression_model_wor)
 
     # define the output
-    paste("A reasonable price for one night at this Airbnb would be: ???",  round(df[df$city==input$city,'price (in Euros)'],2))
+    paste("A reasonable price for one night at this Airbnb would be: €",  round(df[df$city==input$city,'price (in Euros)'],2))
    
   # define what we want to do in case we deal with ratings 
   }else{
     df<-df_creator(variable_list_with_reviews[,'x'], cities, regression_output_amenities_wr, input, regression_model_wr)
     
     # define the output
-    paste("A reasonable price for one night at this Airbnb would be: ???",  round(df[df$city==input$city,'price (in Euros)'],2))
+    paste("A reasonable price for one night at this Airbnb would be: EUR",  round(df[df$city==input$city,'price (in Euros)'],2))
     }#[df$city==input$city]
   })
   
@@ -229,6 +242,7 @@ server <- function(input, output, session){
 
 
 # run the application 
-shinyApp(ui = ui, server = server)
+shinyApp(ui = ui, server = server)  #copy paste the http link below in your browser to launch the app
+
 
 write.csv(regression_output_wr, file= "../../data/regression_output_wr.csv", fileEncoding = "UTF-8")

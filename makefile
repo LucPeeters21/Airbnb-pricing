@@ -9,7 +9,3 @@ analysis: data-preparation
 pricing-app: analysis
 	make -C src/pricing-app
 
-clean:
-	-rm -r data
-
-
