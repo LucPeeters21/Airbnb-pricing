@@ -1,6 +1,7 @@
-## PRICING-APP ##
+## PRICING-APP WORKFLOW ##
 
 DATA = ../../data
+
 
 all: $(DATA)/regression_output_wr.csv
 
