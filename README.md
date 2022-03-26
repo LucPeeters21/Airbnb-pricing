@@ -36,9 +36,9 @@ This research is particularly relevant for tourists planning to book an Airbnb. 
 
 Please follow the installation guide on http://tilburgsciencehub.com/.
 
-- Python. [Installation guide](http://tilburgsciencehub.com/setup/python/).
-- R. [Installation guide](http://tilburgsciencehub.com/setup/r/).
-- Make. [Installation guide](http://tilburgsciencehub.com/setup/make).
+- Python. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/python/).
+- R. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/).
+- Make. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/).
 - For the required Python packages, check the source code lines starting with ```from ... import``` and ```import```.
 - For the required R packages, check the source code lines starting with ```library```.
 
