@@ -45,19 +45,16 @@ Please follow the installation guide on http://tilburgsciencehub.com/.
 #install.packages("googledrive")
 #install.packages('data.table')
 #install.packages("tidypredict")
-library(tidypredict)
-library(yaml)
-library(dplyr)
-library(shiny)
-library(data.table)
-library(broom)
-library(haven)
-library(ggfortify)
-library(ggplot2)
-library(car)
-library(readxl)
-library(base)
-library(googledrive)
+#install.packages("yaml")
+#install.packages("dplyr")
+#install.packages("shiny")
+#install.packages("broom")
+#install.packages("haven")
+#install.packages("ggfortify")
+#install.packages("ggplot2")
+#install.packages("car")
+#install.packages("readxl")
+#install.packages("base")
 ```
 
 ### Running the code
@@ -67,14 +64,14 @@ Follow the instructions to run the code:
 2. Open your command line/terminal:
 
 ```
-clone https://github.com/LucPeeters21/Airbnb-pricing.git
+clone https://github.com/{your username}/Airbnb-pricing.git
 ```
-3. To directly run all code use:
+3. To directly run all code use the following command in your file "airbnb-pricing":
 
 ```
 make
 ```
-4. After these steps you are now able to run the pricing app in ../src/pricing-app -> pricing_app.R
+4. After running all code a http link is generated. Copy paste this link in your browser to launch the app.
 
 Another option will be to run all code in the following order:
 - ../src/data-preparation -> data_preparation.R
