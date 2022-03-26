@@ -40,7 +40,25 @@ Please follow the installation guide on http://tilburgsciencehub.com/.
 - R. [Installation guide](http://tilburgsciencehub.com/setup/r/).
 - Make. [Installation guide](http://tilburgsciencehub.com/setup/make).
 - For the required Python packages, check the source code lines starting with ```from ... import``` and ```import```.
-- For the required R packages, check the source code lines starting with ```library```.
+- Make sure you have installed the following packages:
+```
+#install.packages("googledrive")
+#install.packages('data.table')
+#install.packages("tidypredict")
+library(tidypredict)
+library(yaml)
+library(dplyr)
+library(shiny)
+library(data.table)
+library(broom)
+library(haven)
+library(ggfortify)
+library(ggplot2)
+library(car)
+library(readxl)
+library(base)
+library(googledrive)
+```
 
 ### Running the code
 
