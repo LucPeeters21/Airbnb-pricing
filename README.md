@@ -1,7 +1,7 @@
 # Airbnb - Don't Pay Too Much
 ### Goodbye to overpriced Airbnbs
 
-For a research project on estimating the effect that different Airbnb characterstics have on the price of the Airbnb, we created a tool which enables people to compare the price of a certain Airbnb to other comparable Airbnb's (based on the characterstics of the Airbnb). This can prevent people from booking Airbnb's that ask too much for their listing compared to their competitors. 
+For a research project on estimating the effect that different Airbnb characterstics have on the price of the Airbnb, we created a tool which enables people to compare the price of a certain Airbnb to other comparable Airbnb's (based on the characterstics of the Airbnb). This can prevent people from booking Airbnb's that ask too much for their listing compared to their competitors. A sneak preview of the pricing app is available [here](https://github.com/LucPeeters21/Airbnb-pricing/tree/main/src/pricing-app).
 
 
 ## Motivation
