@@ -25,7 +25,7 @@
 ## 1. Merging process
 
 ### 1.1 Importing the data
-This process consists of downloading the files created by running data_downlad.R and ammenities_matrix.R from the groups's shared Google Drive. Both files where then saved into seperate dataframes, one consisting of delivered data from Airbnb (airbnb_listings) and one consisting of the amenitities belonging to each observation in the data (airbnb_amenities, a matrix that indicates for each amenity that is avaiable at more than 1% of listings, at what listings this amenity is available. This matrix is based on the 'amenities' collumn in the raw data from InsideAirbnb and can be created by running the ammenities_matrix.R file from this folder.).
+This process consists of downloading the files created by running data_downlad.R and ammenities_matrix.R from the groups's shared Google Drive. Both files where then saved into seperate dataframes, one consisting of delivered data from Airbnb (airbnb_listings) and one consisting of the amenitities belonging to each observation in the data (airbnb_amenities, a matrix that indicates for each amenity that is avaiable at more than 1% of listings, at what listings this amenity is available. This matrix is based on the 'amenities' collumn in the raw data from InsideAirbnb and can be created by running the ammenities_matrix.R file from this folder).
 ```
 data_id <-"1Tek0FsrdpnnvzQukog_lmtWAHHvhJJUQ" #the id of the dataset
 drive_download(as_id(data_id), path = "eu_listings.csv", overwrite = TRUE) #download the data from the drive
