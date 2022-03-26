@@ -39,27 +39,23 @@ Please follow the installation guide on http://tilburgsciencehub.com/.
 - Python. [Installation guide](http://tilburgsciencehub.com/setup/python/).
 - R. [Installation guide](http://tilburgsciencehub.com/setup/r/).
 - Make. [Installation guide](http://tilburgsciencehub.com/setup/make).
-- For the required Python packages, check the source code lines starting with ```from ... import``` and ```import```.
-- Make sure you have installed the following packages:
+- For Python, make sure you have installed below packages:
+```
+pip install bs4
+pip install selenium
+```
+
+- For R, make sure you have installed below packages:
 ```
 install.packages("googledrive")
-install.packages('data.table')
 install.packages("tidypredict")
-install.packages("yaml")
-install.packages("dplyr")
-install.packages("shiny")
-install.packages("broom")
-install.packages("haven")
 install.packages("ggfortify")
-install.packages("ggplot2")
 install.packages("car")
-install.packages("readxl")
-install.packages("base")
 ```
 
 ### Running the code
 
-Follow the instructions to run the code:
+Follow below instructions to run the code:
 1. Fork this repository
 2. Open your command line/terminal:
 
