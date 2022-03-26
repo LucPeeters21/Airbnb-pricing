@@ -42,19 +42,19 @@ Please follow the installation guide on http://tilburgsciencehub.com/.
 - For the required Python packages, check the source code lines starting with ```from ... import``` and ```import```.
 - Make sure you have installed the following packages:
 ```
-#install.packages("googledrive")
-#install.packages('data.table')
-#install.packages("tidypredict")
-#install.packages("yaml")
-#install.packages("dplyr")
-#install.packages("shiny")
-#install.packages("broom")
-#install.packages("haven")
-#install.packages("ggfortify")
-#install.packages("ggplot2")
-#install.packages("car")
-#install.packages("readxl")
-#install.packages("base")
+install.packages("googledrive")
+install.packages('data.table')
+install.packages("tidypredict")
+install.packages("yaml")
+install.packages("dplyr")
+install.packages("shiny")
+install.packages("broom")
+install.packages("haven")
+install.packages("ggfortify")
+install.packages("ggplot2")
+install.packages("car")
+install.packages("readxl")
+install.packages("base")
 ```
 
 ### Running the code
@@ -66,7 +66,7 @@ Follow the instructions to run the code:
 ```
 clone https://github.com/{your username}/Airbnb-pricing.git
 ```
-3. To directly run all code use the following command in your file "airbnb-pricing":
+3. To directly run all code use the following command in your directory "airbnb-pricing":
 
 ```
 make
