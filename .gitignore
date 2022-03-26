@@ -8,3 +8,5 @@
 .Rproj.user
 *.csv
 .DS_Store
+**.png
+**.pdf

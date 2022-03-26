@@ -1,4 +1,7 @@
 #install.packages('data.table')
+#install.packages("tidypredict")
+library(tidypredict)
+library(yaml)
 library(broom)
 library(haven)
 library(dplyr)
@@ -11,7 +14,7 @@ library(data.table)
 ### REGRESSION #######
 ######################
 
-# Load data so the make file recognizes the variables
+# Load output data from the data preparation
 airbnb_listings_with_reviews <- read.csv("../../data/listings_with_reviews.csv", fileEncoding = "UTF-8") 
 airbnb_listings_without_reviews <- read.csv("../../data/listings_without_reviews.csv", fileEncoding = "UTF-8")
 
@@ -87,10 +90,12 @@ character_variables_without_reviews <-paste0(variable_list_without_reviews, coll
 
 
 # build regression models with all relevant variables
-regression_final_with_reviews <- lm(as.formula(paste0('log(price_euros)~', character_variables_with_reviews)), airbnb_listings_with_reviews)
+formula_wr<-as.formula(paste0('log(price_euros)~', character_variables_with_reviews))
+regression_final_with_reviews <- lm(formula_wr, airbnb_listings_with_reviews)
 summary(regression_final_with_reviews)
 
-regression_final_without_reviews <- lm(as.formula(paste0('log(price_euros)~', character_variables_without_reviews)),airbnb_listings_without_reviews)
+formula_wor<-as.formula(paste0('log(price_euros)~', character_variables_without_reviews))
+regression_final_without_reviews <- lm(formula_wor,airbnb_listings_without_reviews)
 summary(regression_final_without_reviews)
 
 
@@ -100,5 +105,16 @@ df_regression_final_without_reviews <- tidy(regression_final_without_reviews)
 
 
 # save the regression output of both models
-write.csv2(df_regression_final_with_reviews, file = "../../data/regression_output_with_reviews.csv")
-write.csv2(df_regression_final_without_reviews, file = "../../data/regression_output_without_reviews.csv")
+write.csv(df_regression_final_with_reviews, file = "../../data/regression_output_with_reviews.csv")
+write.csv(df_regression_final_without_reviews, file = "../../data/regression_output_without_reviews.csv")
+
+write.csv(variable_list_with_reviews, file = "../../data/variable_list_with_reviews.csv")
+write.csv(variable_list_without_reviews, file = "../../data/variable_list_without_reviews.csv")
+
+
+# save the model itself such that it can later be loaded and used to make predictions in the shiny App
+parsed_with_reviews <- parse_model(regression_final_with_reviews)
+parsed_without_reviews <- parse_model(regression_final_without_reviews)
+
+write_yaml(parsed_with_reviews, "../../data/regression_output_wr.yml")
+write_yaml(parsed_without_reviews, "../../data/regression_output_wor.yml")

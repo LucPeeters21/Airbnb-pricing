@@ -1,3 +1,5 @@
+library(tidypredict)
+library(yaml)
 library(shiny)
 
 ######################
@@ -7,6 +9,18 @@ library(shiny)
 # load the result of the regression
 regression_output_wr<- read.csv("../../data/regression_output_with_reviews.csv", fileEncoding = "UTF-8")
 regression_output_wor<- read.csv("../../data/regression_output_without_reviews.csv", fileEncoding = "UTF-8")
+airbnb_listings_with_reviews <- read.csv("../../data/listings_with_reviews.csv", fileEncoding = "UTF-8") 
+variable_list_with_reviews<- read.csv("../../data/variable_list_with_reviews.csv")
+variable_list_without_reviews<- read.csv("../../data/variable_list_without_reviews.csv")
+regression_model_wr<-read_yaml("../../data/regression_output_wr.yml")
+regression_model_wr <- as_parsed_model(regression_model_wr)
+regression_model_wor<-read_yaml("../../data/regression_output_wor.yml")
+regression_model_wor <- as_parsed_model(regression_model_wor)
+
+
+
+
+
 
 # select the amenities (since we only selected 10 amenities, we know that 2:11 are the amenities)
 regression_output_amenities_wr<-regression_output_wr[2:11,]
@@ -69,7 +83,6 @@ df_creator<-function(variable_list, cities, regression_output_amenities, input, 
   df[1, 'review_scores_cleanliness']<- as.numeric(input$clean)
   df[1, 'review_scores_location']<- as.numeric(input$location)
   df[1, 'review_scores_value']<- as.numeric(input$value)
-
   # copy the data of the first row to all rows in the data frame
   df[1:length(cities),]<-df[1,]
 
@@ -78,8 +91,7 @@ df_creator<-function(variable_list, cities, regression_output_amenities, input, 
 
   # create a column in which the predicted regression price can later be stored
   df[,'price']<-0
-  df$'price'<-round(exp(predict(regression_final, newdata = df)),2) #run the regression
-
+  df$'price'<- df %>% mutate(pred = exp(!! tidypredict_fit(regression_final)))%>% select(pred)
 
   # arrange the price column in such a way that the highest price is on the top
   df<- df %>% arrange(desc(price))
@@ -180,18 +192,18 @@ server <- function(input, output, session){
   
   # check if we deal with a listing with or without reviews and adjust the model based on this information
   if(input$ratings_present=="No"){
-    df<-df_creator(variable_list_without_reviews, cities, regression_output_amenities_wor, input, regression_final_without_reviews)
+    df<-df_creator(variable_list_without_reviews[,'x'], cities, regression_output_amenities_wor, input, regression_model_wor)
 
     # define the output
-    paste("A reasonable price for one night at this Airbnb would be: €",  round(df$'price (in Euros)'[df$city==input$city],2))
+    paste("A reasonable price for one night at this Airbnb would be: ???",  round(df[df$city==input$city,'price (in Euros)'],2))
    
   # define what we want to do in case we deal with ratings 
   }else{
-    df<-df_creator(variable_list_with_reviews, cities, regression_output_amenities_wr, input, regression_final_with_reviews)
+    df<-df_creator(variable_list_with_reviews[,'x'], cities, regression_output_amenities_wr, input, regression_model_wr)
     
     # define the output
-    paste("A reasonable price for one night at this Airbnb would be: €",  round(df$'price (in Euros)'[df$city==input$city],2))
-    }
+    paste("A reasonable price for one night at this Airbnb would be: ???",  round(df[df$city==input$city,'price (in Euros)'],2))
+    }#[df$city==input$city]
   })
   
   
@@ -204,7 +216,7 @@ server <- function(input, output, session){
     
     # check if we deal with a listing with or without reviews and adjust the data frame based on this information
     if(input$ratings_present=="No"){
-      df<-df_creator(variable_list_without_reviews, cities, regression_output_amenities_wor, input, regression_final_without_reviews)
+      df<-df_creator(variable_list_without_reviews[,'x'], cities, regression_output_amenities_wor, input, regression_model_wor)
       
       # extract only the relevant columns of the dataframe that we want to show to the user
       df_to_show<-df%>% select(city, 'price (in Euros)')
@@ -212,7 +224,7 @@ server <- function(input, output, session){
     
       # define what we want to do in case we deal with ratings 
     else{
-      df<-df_creator(variable_list_with_reviews, cities, regression_output_amenities_wr, input, regression_final_with_reviews)
+      df<-df_creator(variable_list_with_reviews[,'x'], cities, regression_output_amenities_wr, input, regression_model_wr)
     
       # extract only the relevant columns of the dataframe that we want to show to the user
       df_to_show<-df%>% select(city, 'price (in Euros)')
