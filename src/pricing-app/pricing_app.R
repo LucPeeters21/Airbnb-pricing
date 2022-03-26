@@ -18,10 +18,6 @@ regression_model_wor<-read_yaml("../../data/regression_output_wor.yml")
 regression_model_wor <- as_parsed_model(regression_model_wor)
 
 
-
-
-
-
 # select the amenities (since we only selected 10 amenities, we know that 2:11 are the amenities)
 regression_output_amenities_wr<-regression_output_wr[2:11,]
 regression_output_amenities_wor<-regression_output_wor[2:11,]
