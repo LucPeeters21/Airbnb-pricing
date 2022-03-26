@@ -1,7 +1,7 @@
 # Airbnb - Don't Pay Too Much
 ### Goodbye to overpriced Airbnbs
 
-For a research project on estimating the effect that different Airbnb characterstics have on the price of the Airbnb, we created a tool which enables people to compare the price of a certain Airbnb to other comparable Airbnb's (based on the characterstics of the Airbnb). This can prevent people from booking Airbnb's that ask too much for their listing compared to their competitors. 
+For a research project on estimating the effect that different Airbnb characterstics have on the price of the Airbnb, we created a tool which enables people to compare the price of a certain Airbnb to other comparable Airbnb's (based on the characterstics of the Airbnb). This can prevent people from booking Airbnb's that ask too much for their listing compared to their competitors. A sneak preview of the pricing app is available [here](https://github.com/LucPeeters21/Airbnb-pricing/tree/main/src/pricing-app).
 
 
 ## Motivation
@@ -39,30 +39,58 @@ Please follow the installation guide on http://tilburgsciencehub.com/.
 - Python. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/python/).
 - R. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/).
 - Make. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/).
-- For the required Python packages, check the source code lines starting with ```from ... import``` and ```import```.
-- For the required R packages, check the source code lines starting with ```library```.
+
+- For Python, make sure you have installed below packages:
+```
+pip install bs4
+pip install selenium
+```
+
+- For R, make sure you have installed below packages:
+```
+install.packages("tidyverse")
+install.packages("ggfortify")
+install.packages("yaml")
+install.packeges("shiny")
+install.packages("googledrive")
+install.packages("tidypredict")
+install.packages("ggfortify")
+install.packages("car")
+install.packages("base")
+install.packages("data.table")
+install.packages("broom")
+install.packages("haven")
+install.packages("readxl")
+```
 
 ### Running the code
 
-Follow the instructions to run the code:
+Follow below instructions to run the code:
 1. Fork this repository
 2. Open your command line/terminal:
 
 ```
-clone https://github.com/LucPeeters21/Airbnb-pricing.git
+git clone https://github.com/[your username]/Airbnb-pricing.git
 ```
-3. To directly run all code use:
+3. To directly run all code use the following command in your directory "airbnb-pricing":
 
 ```
 make
 ```
-4. After these steps you are now able to run the pricing app in ../src/pricing-app -> pricing_app.R
+4. After running all code a http link is generated. Copy paste this link in your browser to launch the app.
+    Note: do not close/terminate the command line/terminal before you are finished with using the app. When the command line/terminal is closed and/or stops running, the website will not be available anymore.
 
 Another option will be to run all code in the following order:
 - ../src/data-preparation -> data_preparation.R
 - ../src/analysis -> regression.R
 - ../src/pricing-app -> pricing_app.R
 
+
+#### Running the data collection and amenities matrix preparation
+Note: Above worflow does not include the data collection steps and the preparation of the amenities matrix. Running these steps typically takes around 20 hours in total. Therefore, the output files of these two steps are stored on our shared google drive folder, from which they are downloaded in the data_preparation.R file. If one is interested in running these steps too, one should run below files in the following order:
+- ../src/data-collection -> Inside_Airbnb_link_scraper.py
+- ../src/data-collection -> data_download.R
+- ../src/data-preparation -> ammenities_matrix.R
 
 ## Authors
 

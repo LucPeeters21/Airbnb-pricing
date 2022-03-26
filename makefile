@@ -6,5 +6,6 @@ data-preparation:
 analysis: data-preparation
 	make -C src/analysis
 
-clean:
-	-rm -r data
+pricing-app: analysis
+	make -C src/pricing-app
+
