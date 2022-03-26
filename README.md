@@ -60,7 +60,7 @@ Follow below instructions to run the code:
 2. Open your command line/terminal:
 
 ```
-clone https://github.com/[your username]/Airbnb-pricing.git
+git clone https://github.com/[your username]/Airbnb-pricing.git
 ```
 3. To directly run all code use the following command in your directory "airbnb-pricing":
 
