@@ -204,7 +204,7 @@ server <- function(input, output, session){
     df<-df_creator(variable_list_without_reviews[,'x'], cities, regression_output_amenities_wor, input, regression_model_wor)
 
     # define the output
-    paste("A reasonable price for one night at this Airbnb would be: €",  round(df[df$city==input$city,'price (in Euros)'],2))
+    paste("A reasonable price for one night at this Airbnb would be: EUR",  round(df[df$city==input$city,'price (in Euros)'],2))
    
   # define what we want to do in case we deal with ratings 
   }else{
